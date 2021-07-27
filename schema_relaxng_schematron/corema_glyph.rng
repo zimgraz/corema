@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  
+  <start>
+    <element name="TEI">
+      <externalRef href="corema_teiHeader.rng"/>
+      <element name="facsimile">
+        <oneOrMore>
+          <element name="surface">
+            <attribute name="start"/>
+            <ref name="graphic"/>
+          </element>
+        </oneOrMore>
+      </element>
+      <element name="text">
+        <element name="body">
+          <attribute>
+            <name ns="http://www.w3.org/XML/1998/namespace">space</name>
+            <data type="NCName"/>
+          </attribute>
+          <ref name="ab"/>
+        </element>
+      </element>
+    </element>
+  </start>
+
+  <define name="graphic">
+    <element name="graphic">
+      
+      <optional>
+        <attribute name="facs"/>
+      </optional>
+      
+      <optional>
+        <attribute name="corresp"/>
+      </optional>
+      <optional>
+        <attribute name="mimeType"/>
+      </optional>
+      <optional>
+        <attribute name="url">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ana"/>
+      </optional>
+      
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="ID"/>
+      </attribute>
+      
+    </element>
+  </define>
+  <define name="note">
+    <element name="note">
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+          <choice>
+            <value>en</value>
+            <value>de</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="corresp"/>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="g"/>
+          <ref name="supplied"/>
+          <ref name="unclear"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="hi">
+    <element name="hi">
+      <optional>
+        <attribute name="rend"/>
+      </optional>
+      <optional>
+        <attribute name="style">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="add"/>
+          <ref name="am"/>
+          <ref name="del"/>
+          <ref name="ex"/>
+          <ref name="g"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="note"/>
+          <ref name="pb"/>
+          <ref name="cb"/>
+          <ref name="seg"/>
+          <ref name="sic"/>
+          <ref name="supplied"/>
+          <ref name="w"/>
+          <ref name="foreign"/>
+          <ref name="unclear"/>
+          <ref name="listTranspose"/>
+          <ref name="handShift"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="abbr">
+    <element name="abbr">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="add"/>
+          <ref name="am"/>
+          <ref name="del"/>
+          <ref name="ex"/>
+          <ref name="g"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="mod"/>
+          <ref name="note"/>
+          <ref name="pb"/>
+          <ref name="cb"/>
+          <ref name="sic"/>
+          <ref name="supplied"/>
+          <ref name="unclear"/>
+          <ref name="w"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="seg">
+    <element name="seg">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="fw"/>
+          <ref name="abbr"/>
+          <ref name="add"/>
+          <ref name="anchor"/>
+          <ref name="del"/>
+          <ref name="expan"/>
+          <ref name="g"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="mod"/>
+          <ref name="note"/>
+          <ref name="pb"/>
+          <ref name="cb"/>
+          <ref name="seg"/>
+          <ref name="sic"/>
+          <ref name="supplied"/>
+          <ref name="unclear"/>
+          <ref name="w"/>
+          <ref name="listTranspose"/>
+          <ref name="cb"/>
+          <ref name="foreign"/>
+          <ref name="handShift"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="foreign">
+    <element name="foreign">
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+          <data type="language"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="expan"/>
+          <ref name="g"/>
+          <ref name="lb"/>
+          <ref name="mod"/>
+          <ref name="unclear"/>
+          <ref name="supplied"/>
+          <ref name="note"/>
+          <ref name="ex"/>
+          <ref name="am"/>
+          <ref name="add"/>
+          <ref name="hi"/>
+          <ref name="w"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="lb">
+    <element name="lb">
+      <optional>
+      <attribute name="n">
+        <data type="NCName"/>
+      </attribute>
+      </optional>
+    </element>
+  </define>
+  <define name="fw">
+    <element name="fw">
+      <attribute name="type">
+        <choice>
+          <value>header</value>
+          <value>catchword</value>
+          <value>qire number</value>
+          <value>recipe number</value>
+        </choice>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="add"/>
+          <ref name="date"/>
+          <ref name="del"/>
+          <ref name="foreign"/>
+          <ref name="g"/>
+          <ref name="graphic"/>
+          <ref name="handShift"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="mod"/>
+          <ref name="note"/>
+          <ref name="pb"/>
+          <ref name="cb"/>
+          <ref name="w"/>
+          <ref name="seg"/>
+          <ref name="supplied"/>
+          <ref name="ab"/>
+          <ref name="anchor"/>
+          <ref name="sic"/>
+          <ref name="listTranspose"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="pb">
+    <element name="pb">
+      <attribute name="n">
+        <data type="NMTOKEN"/>
+      </attribute>
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="ID"/>
+      </attribute>
+    </element>
+  </define>
+  <define name="cb">
+    <element name="cb">
+      <attribute name="n">
+        <data type="NCName"/>
+      </attribute>
+    </element>
+  </define>
+  <define name="del">
+    <element name="del">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="am"/>
+          <ref name="del"/>
+          <ref name="ex"/>
+          <ref name="g"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="note"/>
+          <ref name="unclear"/>
+          <ref name="foreign"/>
+          <ref name="add"/>
+          <ref name="w"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="supplied">
+    <element name="supplied">
+      <attribute name="reason">
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="am"/>
+          <ref name="ex"/>
+          <ref name="g"/>
+          <ref name="hi"/>
+          <ref name="note"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="g">
+    <element name="g">
+      <optional>
+        <attribute name="ref"/>
+      </optional>
+      <optional>
+        <attribute name="rend">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="handShift">
+    <element name="handShift">
+      <empty/>
+    </element>
+  </define>
+  <define name="add">
+    <element name="add">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="del"/>
+          <ref name="g"/>
+          <ref name="hi"/>
+          <ref name="metamark"/>
+          <ref name="note"/>
+          <ref name="supplied"/>
+          <ref name="unclear"/>
+          <ref name="ex"/>
+          <ref name="am"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="mod">
+    <element name="mod">
+      <optional>
+        <attribute name="ana">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="corresp"/>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="add"/>
+          <ref name="del"/>
+          <ref name="g"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="mod"/>
+          <ref name="seg"/>
+          <ref name="sic"/>
+          <ref name="note"/>
+          <ref name="listTranspose"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="listTranspose">
+    <element name="listTranspose">
+      <element name="transpose">
+        <oneOrMore>
+          <element name="ptr">
+            <attribute name="target"/>
+          </element>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+  <define name="unclear">
+    <element name="unclear">
+      <optional>
+        <attribute name="reason">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="w">
+    <element name="w">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="am"/>
+          <ref name="anchor"/>
+          <ref name="ex"/>
+          <ref name="g"/>
+          <ref name="handShift"/>
+          <ref name="lb"/>
+          <ref name="metamark"/>
+          <ref name="mod"/>
+          <ref name="note"/>
+          <ref name="pb"/>
+          <ref name="cb"/>
+          <ref name="sic"/>
+          <ref name="foreign"/>
+          <ref name="hi"/>
+          <ref name="del"/>
+          <ref name="supplied"/>
+          <ref name="fw"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ex">
+    <element name="ex">
+      <text/>
+    </element>
+  </define>
+  <define name="am">
+    <element name="am">
+      <choice>
+        <ref name="g"/>
+        <ref name="mod"/>
+      </choice>
+    </element>
+  </define>
+  <define name="sic">
+    <element name="sic">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="abbr"/>
+          <ref name="am"/>
+          <ref name="ex"/>
+          <ref name="g"/>
+          <ref name="lb"/>
+          <ref name="mod"/>
+          <ref name="note"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="anchor">
+    <element name="anchor">
+      <attribute name="corresp"/>
+      <attribute name="type">
+        <data type="NCName"/>
+      </attribute>
+    </element>
+  </define>
+  <define name="expan">
+    <element name="expan">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="g"/>
+          <ref name="lb"/>
+          <ref name="w"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ab">
+    <element name="ab">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="fw"/>
+          <ref name="abbr"/>
+          <ref name="add"/>
+          <ref name="date"/>
+          <ref name="del"/>
+          <ref name="foreign"/>
+          <ref name="g"/>
+          <ref name="graphic"/>
+          <ref name="handShift"/>
+          <ref name="hi"/>
+          <ref name="lb"/>
+          <ref name="mod"/>
+          <ref name="note"/>
+          <ref name="pb"/>
+          <ref name="cb"/>
+          <ref name="w"/>
+          <ref name="seg"/>
+          <ref name="supplied"/>
+          <ref name="ab"/>
+          <ref name="anchor"/>
+          <ref name="sic"/>
+          <ref name="listTranspose"/>
+          <element name="gi">
+            <data type="NCName"/>
+          </element>
+          <element name="term">
+            <text/>
+          </element>
+          <element name="milestone">
+            <attribute name="unit">
+              <value>collection</value>
+            </attribute>
+            <attribute name="n"/>           
+            <empty/>
+          </element>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="date">
+    <element name="date">
+      <optional>
+        <attribute name="when">
+          <data type="string"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="hi"/>
+          <ref name="pb"/>
+          <ref name="cb"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="title">
+    <element name="title">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="metamark">
+    <element name="metamark">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="g"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+</grammar>

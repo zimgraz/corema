@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://glossa.uni-graz.at/gamsdev/steinerc/corema_schema/corema_recipes.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://glossa.uni-graz.at/gamsdev/steinerc/corema_schema/corema_recipes.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Electronic transcription of "Signatur"</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>Hyperdiplomatische Basistranskription der Handschrift ...</edition>
+                <editor>
+                    <forename>Astrid</forename>
+                    <surname>Böhm</surname>
+                </editor> 
+                <principal>
+                    <forename>Helmut W.</forename>
+                    <surname>Klug</surname>
+                </principal>
+                <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>
+                    <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, Universität Graz</orgName>
+                </publisher>
+                <authority>
+                    <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
+                </authority>
+                <distributor>
+                    <ref target="https://gams.uni-graz.at"></ref>
+                    <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY
+                        4.0</licence>
+                    <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/at/">Creative Commons BY-NC-SA 4.0
+                    </licence>
+                </availability>
+                <date when="2020"></date>
+                <pubPlace>Graz</pubPlace>
+                <idno type="PID">o:corema.msdesc.recipes</idno><!-- da muss rein: o:corema.a1 oder o:corema.bs2 usw. -->
+                <ref target="context:corema.recipes" type="context"></ref>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <msDesc> 
+                    <msIdentifier> 
+                        <country>LAND</country> 
+                        <settlement>STADT</settlement> 
+                        <institution>BIBL/UNI/ARCHIV</institution> 
+                        <repository>UNTERBATEILUNG ODER GLEICH WIE INSTIT.</repository> <!-- @C brauch ich nicht, TEI auch nicht, wenn gleich wie Institution, dann streichen -->
+                        <idno>BIB-SIGN</idno> <!-- nur Sigle, komplette Signatur baut sich zusammen ; the official name.-->
+                        <msName>VULGONAME FALLS VORHADEN</msName> <!-- Common name isn't mandatory ; Common name is "the way we're used to call this manuscript in our community of researchers".  N.B. : in the French way of encoding, this part is not necessary - it is not in the habits. -->
+                        <altIdentifier type="abbr"> <!-- Corema-Kurzsigle --> <!-- Element kann mehrfach vorkommen, wenn zb alte Signatur einer Bib. Alternative ID, an abbreviation used in the CoReMA project, a very short one. This helps to find the manuscript faster. Over the recent year these abbrevations became a kind of acepted standard between scholars. It could also a old signature of the manuscript -->
+                            <idno>COREMA-ABBR</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno></idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    
+                    <msContents>
+                        <textLang ana="manuscript"><lang ana="main" n="Q29540">Bavarian</lang>Bairisch mit mdt. Merkmalen.</textLang>
+                        <!-- WARNING : this line is a fake example built on mixed code. wenn mehr Infos vorhanden, dann ein <lang> nur um die Sprache und dann weiter im <textLang> s.a Gr1. zB = for example -->
+                    </msContents>
+                    
+                    <physDesc> 
+                        <objectDesc form="composite-Manuscript"> <!-- oder 'fragment', 'codex', 'scroll' usw ; -->
+                            <supportDesc > 
+                                
+                                <extent> 
+                                    <measure unit="leaf" type="leavesCount">FOLIOZAHL</measure> 
+                                    <dimensions type="block" unit="mm">
+                                        <height></height>
+                                        <width></width>
+                                    </dimensions> 
+                                </extent>
+                                
+                                <foliation>  
+                                    <ab type="completeness"></ab> <!-- this could be free text. For instance a manuscript to be set up from different parts.Equivalent of "numérotation des feuillets", and this is different from "nombre des feuillets", see file H2_tei_glyph.xml line 74 tag MEASURE @leaf for an example. WARNING au décompte des folio ; * is a symbol the meaning of which needs to be cleared up -->
+                                    <ab type="hand"></ab>  <!-- AB tag is always free text used here to comment the FORMULA tag, see e.g. in file H2_tei_glyph.xml-->
+                                </foliation> 
+                                
+                                
+                                
+                                <collation> <!-- physical description of the manuscripts: -->
+                                    <formula style="chroust"></formula> 
+                                    <ab></ab>
+                                    <catchwords>INFOS  ZU KUSTODEN</catchwords> 
+                                    <locusGrp> <!--detailierte Lagenbeschreibung mgl., s.Bsp. Gr1 -->
+                                        <locus>FOLIO VON BIS</locus> 
+                                        <locus >FOLIO VON BIS</locus><!-- usw. -->
+                                    </locusGrp> <!-- locusGrp is used in some rare cases with some detailed and specific information on the French side.-->
+                                </collation>
+                                
+                                <condition> 
+                                    <desc>TEXT</desc> <!-- wenn hier ganz viel steht, dann <lb/> erlaubt (s.Wo5) ; tag LB can be used in tag DESC to structure the text a little bit and a better layout on the website. -->
+                                    <material xml:lang="de">Pergament</material>
+                                    <material xml:lang="en">parchment</material><!-- basic informtions are translated in the main languages of CoReMA, i.e. : de, en. Gentle reminder: the order in the webpage isn't the order of the xml document. -->
+                                    <watermark><ref target="https://www.example.com/watermarkinbriquet">Briquet 12995</ref>  <!-- wenn hier ganz viel steht, dann <lb/> erlaubt (s.Ha1) --><!-- xml:id="xyz" isn't mandatory ; it is not even used on the website ; this attribute is deleted from this code-->
+                                        <!--<locusGrp>          <!-\- wenn sich Wasserzeichen verorten lassen, s. Gr1-\->
+                                            <locus></locus>
+                                        </locusGrp>-->
+                                    </watermark><!-- Briquet has links -->
+                                </condition>
+                            </supportDesc>
+                            
+                            <layoutDesc> 
+                                <layout> <!-- HIER  DIE KOLUMNENANZAHL REIN, 1, 2 oder 3  je nach dem-->
+                                    <p ana="measure">X-X</p>
+                                    <p ana="textblock">zb zweizeilig</p>
+                                    <p ana="lines">X-X</p>
+                                    <p ana="text">TEXT....</p> <!-- wenn hier ganz viel steht, dann <lb/> erlaubt (s.M1) ; seulement si il y a deux colonnes différentes dans le texte, pour les distinguer l'une de l'autre. Gentle reminder: use tag LB each time you need to structure a little bit your information for a better reading expereince on the website.-->
+                                    <p ana="notula">TEXT....</p><!-- Here is also a good place to add notulae. Annotations: old signatures, mention/annotation of owners, modern added texts. -->
+                                    <p ana="deco">TEXT....</p> <!--put deco here or in decoDesc, depending on how important that is?-->
+                                    <p ana="gloss">TEXT....</p> <!--This is the place where to describe the glosses in general. Two manuscripts at least have important glosses. BUT, the scholarly edited glosses goes within the transcription. i.e.: in <body> -->
+                                </layout>
+                                
+                            </layoutDesc>
+                            
+                        </objectDesc>
+                        
+                        <handDesc><!-- allgemeines zu den Schreiberhänden, zB durch <handDesc @hands="2"> heißt MS weist 2 Hände auf usw. If there is more than one hand, see: H2_tei_glyph.xml example with the use of @ana attribute and numbering-->
+                            <handNote></handNote> <!-- NOT MANDATORY, as most of the content of the schema. This HAND section can be sometimes only for the receipes taken into consideration in the encoding, not always for the entire manuscript ; <handNote ana="1"> mit @ kann ich auf eine bestimmte Hand hinweisen. Gentle reminder: use tag LB each time you need to structure a little bit your information for a better reading expereince on the website.-->
+                        </handDesc>
+                        <!--<scriptDesc><ab></ab></scriptDesc>--> <!-- hier müsste die Handbeschreibung rein, wennn zwei Beschreibungen, dann mit ab in der ersten Note arbeiten, s. M5 -->
+                        
+                        <bindingDesc> <!-- NOT MANDATORY: depending on habits and information available. GENERAL COMMENT : When a TAG is not used, this have to be deleted in order to avoid empty sections in the layout of the website. -->
+                            <binding corresp="#Einband"> 
+                                <condition></condition>
+                                <decoNote type="bindingMaterial"></decoNote>
+                                <decoNote type="decoration">Verzierunge jeglicher Art</decoNote>
+                                <decoNote type="metal"></decoNote>
+                                <decoNote type="clasps">Schnallen</decoNote>
+                                <decoNote type="spine">Buchrücken</decoNote>
+                                <decoNote type="added"></decoNote>
+                                <decoNote type="wastepaper">Makulatur, altes schon mal benutzes Papier </decoNote>
+                                <decoNote type="decoPlaceDate">
+                                    <origDate>zb eingeprägte Jahreszahl</origDate>
+                                </decoNote>
+                                <!-- wenn vorhanden -->
+                                
+                            </binding>
+                        </bindingDesc>
+                    </physDesc>
+                    
+                    <history>
+                        
+                        <origin> 
+                            <origDate><date xml:lang="de" notBefore="1450" notAfter="1500">Text and/or dates</date><date xml:lang="en" notBefore="1450" notAfter="1500">2nd half of 15th c.</date></origDate><!-- Gives an indicative time span or a precise date (according to what can be said) to feed a timeline on the website. Use the @when, if the exact date is known. -->
+                            <note></note><!-- arguments for the datation. -->
+                            <origDate corresp="#234v">JAHR</origDate><!-- wenn eine Datierung auf einem Folio ist dann hinter # die Folioangabe und als Elementeninhalt die Jahreszahl; @corresp is used to indicate which follio contains an explicit written date on the manuscript itselph, eg.: colophon. The value of @corresp starts with an # followed by three digit + letter "r", for "recto", or "v", for the "verso" e.g.: #012r and JAHR should be substituted by a standard way of writing the date (not as it is written on the manuscript ; this might appear directly in the encoded transcription, maybe). A special attention should be given to original colophon and dates and copy of the colophon and dates. Consider a more sublte granularity to makethe difference between first date and youger copies.code example : <origDate corresp="#198r">1497</origDate> <origDate corresp="#221v">1498</origDate> <origDate corresp="#222v">1498</origDate> <origDate corresp="#221r">1499</origDate>  -->
+                            <origPlace>
+                                <placeName xml:lang="de">Entstehungsort unbekannt</placeName>
+                                <placeName xml:lang="en">place of origin unknown</placeName>
+                                <!--hier noch TEXT mgl. nicht vor placeName!--></origPlace>
+                            <!-- Entstehungsort MUSS eingetragen werden, wenn mehr Infos dann innerhalb von <origPlace> ein <placeName> nur um den Ort/Info , s.a. Gr1-->
+                            
+                        </origin> 
+                        
+                        <provenance>Provinienz falls bekannt</provenance> <!-- if there is some information about the provenance, otherwise, delete the tag, as usual.-->
+                        
+                        <acquisition>TEXT letzer 'Schritt' wie die HS an den aktuellen Ort gekommen ist, zb. Besitzvermerk usw
+                            <signatures>Beschreibung von Stempel, Seitenangebn usw</signatures>
+                        </acquisition>
+                        
+                    </history>
+                    
+                    <!-- Alle Teile --><!-- Teil Kochrezept ALLES GLEICH NUR ZUSÄTZLICH HEAD + ANA-->
+                    <msPart n="x-y">
+                        <msContents>
+                            <textLang><!-- wenn zwei sprachen dann so, ansonsten nur die 'main' Sprache   -->
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang><!-- MANDATORY -->
+                                <lang ana="other" n="Q1163234">Medieval Latin</lang><!-- NOT MANDATORY -->
+                            </textLang>
+                            <msItem>
+                                <locus ana="folio">Folio bis Folio</locus>
+                                <title>bla</title>
+                                <note>bla</note><!-- kann -->
+                            </msItem>
+                        </msContents>
+                    </msPart>
+                    
+                    <!-- Teil Kochrezept ALLES GLEICH NUR ZUSÄTZLICH HEAD + ANA
+                    wenn keine Sprache eingetragen ist, dann darf auch keine note rein, die note wird ohne Sprache nicht ausgelesen (zb bei leerem Blatt oder Zeichnung usw)-->
+                    <msPart ana="cooking_recipes" n="x-y">
+                        <head></head>
+                        <msContents>
+                            <textLang>
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang></textLang>
+                            <msItem>
+                                <locus ana="folio">x-y</locus> 
+                                <title>bla</title> 
+                                <note>bla</note><!-- kann. Take care of structuring your content with LB. -->
+                            </msItem>
+                        </msContents>
+                    </msPart>
+                </msDesc>
+                
+                <listBibl type="transcriptions">
+                    <bibl></bibl> 
+                    <bibl>Transkription Astrid Böhm</bibl>
+                </listBibl>
+                <listBibl type="translations">
+                    <bibl>analogue text</bibl> 
+                    <bibl><ref target="exmple.com"></ref>digital text</bibl>
+                </listBibl>
+                <listBibl type="catalogues">
+                    <bibl></bibl> 
+                    <bibl>text</bibl>
+                </listBibl>
+                <listBibl type="digital facsimiles">
+                    <bibl></bibl> 
+                    <bibl>text</bibl>
+                </listBibl>
+                <listBibl type="manuscript descriptions">
+                    <bibl></bibl> 
+                    <bibl>text</bibl>
+                </listBibl>
+                <listBibl type="research literature">
+                    <bibl>URL</bibl> 
+                    <bibl>URL</bibl>
+                    <bibl>URL</bibl>
+                </listBibl>
+                
+            </sourceDesc>
+        </fileDesc>
+        
+        
+    </teiHeader>
+    
+    
+    <text>
+        <body>
+            <p>Transkription</p>
+        </body>
+    </text>
+</TEI>
+
+
+

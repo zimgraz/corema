@@ -1,0 +1,1253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns="http://relaxng.org/ns/structure/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="TEI">
+      <element name="teiHeader">
+        <element name="fileDesc">
+          <element name="titleStmt">
+            <oneOrMore>
+              <ref name="title_in_titleStmt"/>
+            </oneOrMore>
+          </element>
+          <element name="editionStmt">
+            <element name="edition">
+              <text/>
+            </element>
+            <oneOrMore>
+              <element name="respStmt">
+                <element name="resp"><text/></element>
+                <oneOrMore><element name="persName"><text/></element></oneOrMore>
+              </element>
+            </oneOrMore>
+            <element name="principal">
+              <element name="persName"><text/></element>
+            </element>
+            <element name="funder">
+              <text/>
+              <attribute name="ref">
+                <text/>
+              </attribute>
+            </element>
+          </element>
+          <element name="publicationStmt">
+            <element name="publisher">
+              <ref name="ref"/>
+              <ref name="orgName"/>
+            </element>
+            <element name="authority">
+              <ref name="ref"/>
+              <ref name="orgName"/>
+            </element>
+            <element name="distributor">
+              <ref name="ref"/>
+              <ref name="orgName"/>
+            </element>
+            <element name="availability">
+              <oneOrMore>
+                <element name="licence">
+                  <attribute name="n"/>
+                  <attribute name="target">
+                    <data type="anyURI"/>
+                  </attribute>
+                  <text/>
+                </element>
+              </oneOrMore>
+            </element>
+            <element name="date">
+              <attribute name="when">
+                <data type="date"/>
+              </attribute>
+            </element>
+            <element name="pubPlace">
+              <data type="NCName"/>
+            </element>
+            <ref name="idno"/>
+          </element>
+          <element name="seriesStmt">
+            <element name="ab">
+              <ref name="title_header"/>
+              <oneOrMore>
+                <ref name="ref"/>
+              </oneOrMore>
+            </element>
+          </element>
+          <element name="sourceDesc">
+            <oneOrMore>
+              <element name="bibl">
+                <attribute name="type">
+                  <choice>
+                    <value>corresponding_manuscript</value>
+                    <value>corresponding_collection</value>
+                    <value>manuscript_page</value>
+                    <value>manuscript_tei_source</value>
+                    <value>manuscript_context</value>
+                  </choice>
+                </attribute>
+                <choice>
+                  <ref name="msIdentifier"/>
+                  <group>
+                    <ref name="title_header"/>
+                    <ref name="ref"/>
+                  </group>
+                </choice>
+              </element>
+            </oneOrMore>
+          </element>
+        </element>
+        <element name="encodingDesc">
+          <element name="ab">
+            <element name="desc"><text/></element>
+            <oneOrMore>
+              <ref name="ref"/>
+            </oneOrMore>
+          </element>
+        </element>
+        <element name="profileDesc">
+          <element name="textClass">
+            <attribute name="ana"/>
+            <element name="keywords">
+              <element name="term">
+                <data type="NCName"/>
+              </element>
+            </element>
+          </element>
+          <element name="creation">
+              <oneOrMore>
+                <ref name="origDate"/>
+              </oneOrMore>
+            <optional>
+              <ref name="origPlace"/>
+            </optional>
+          </element>
+          <element name="langUsage">
+            <element name="language">
+              <attribute name="ident">
+                <data type="language"/>
+              </attribute>
+              <attribute name="source">
+                <data type="anyURI"/>
+              </attribute>
+              <text/>
+            </element>
+          </element>
+        </element>
+      </element>
+      <element name="text">
+        <element name="body">
+          <ref name="div_body"/>
+        </element>
+      </element>
+    </element>
+  </start>
+  <define name="origPlace">
+    <element name="origPlace">
+      <optional>
+        <attribute name="cert">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="placeName"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="placeName">
+    <element name="placeName">
+      
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="language"/>
+      </attribute>
+      
+      <text/>
+    </element>
+  </define>
+  <define name="q">
+    <element name="q">
+      <text/>
+    </element>
+  </define>
+  <define name="origDate">
+    <element name="origDate">
+      <optional>
+        <attribute name="cert">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="corresp">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="date_in_origDate"/>
+          <ref name="q"/>
+          <ref name="lb"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="date_in_origDate">
+    <element name="date">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="language"/>
+      </attribute>
+      <optional>
+        <attribute name="when">
+          <data type="gYear"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="notAfter">
+          <data type="gYear"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="notBefore">
+          <data type="gYear"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <ref name="q"/>
+          <ref name="lb"/>
+          <text/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="msIdentifier">
+    <element name="msIdentifier">
+      <optional>
+        <element name="country">
+          <data type="NCName"/>
+        </element>
+      </optional>
+      <optional>
+        <element name="region">
+          <data type="NCName"/>
+        </element>
+      </optional>
+      <optional>
+        <element name="settlement">
+          <text/>
+        </element>
+      </optional>
+      <optional>
+        <element name="institution">
+          <text/>
+          <optional>
+            <attribute name="ref">
+              <data type="anyURI"/>
+            </attribute>
+          </optional>
+        </element>
+      </optional>
+      <optional>
+        <element name="repository">
+          <text/>
+        </element>
+      </optional>
+      <optional>
+        <ref name="idno"/>
+      </optional>
+      <optional>
+        <element name="msName">
+          <text/>
+        </element>
+      </optional>
+      <element name="altIdentifier">
+        <attribute name="type">
+          <choice>
+            <value>abbr</value>
+            <value>collection</value>
+          </choice>
+        </attribute>
+        <ref name="idno"/>
+      </element>
+      <optional>
+        <oneOrMore>
+          <element name="altIdentifier">
+            <optional>
+              <attribute name="type">
+                <data type="NCName"/>
+              </attribute>
+            </optional>
+            <ref name="idno"/>
+          </element>
+        </oneOrMore>
+      </optional>
+    </element>
+  </define>
+  <define name="title_header">
+    <element name="title">
+      <optional>
+        <attribute name="ref">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+          <text/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="title_in_titleStmt">
+    <element name="title">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="NCName"/>
+      </attribute> 
+      <oneOrMore>
+          <text/> 
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="orgName">
+    <element name="orgName">
+      <optional>
+        <attribute name="ref">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="idno">
+    <element name="idno">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ref">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <data type="anyURI"/>
+    </element>
+  </define>
+  <define name="p">
+    <element name="p">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="ref"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+
+
+  <!--  start body tags -->
+  
+  
+  <define name="div_body">
+    <attribute>
+      <name ns="http://www.w3.org/XML/1998/namespace">space</name>
+      <value>preserve</value>
+    </attribute>
+    <element name="div">
+
+      <attribute name="n">
+        <data type="integer"/>
+      </attribute>
+
+      <optional>
+        <attribute name="part">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ref">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+
+      <attribute name="type">
+
+        <choice>
+          <value>recipe</value>
+          <value>medicinal</value>
+          <value>introduction</value>
+          <value>kitchenTip</value>
+          <value>household</value>
+          <value>dietetics</value>
+          <value>artTechnology</value>
+        </choice>
+
+      </attribute>
+
+
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="NCName"/>
+      </attribute>
+
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="NCName"/>
+      </attribute>
+
+
+      <interleave>
+
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="title_body"/>
+            <ref name="ref"/>
+            <ref name="alternative"/>
+            <ref name="dish"/>
+            <ref name="ingredient"/>
+            <ref name="instruction"/>
+            <ref name="kitchenTip"/>
+            <ref name="householdTip"/>
+            <ref name="religion"/>
+            <ref name="date"/>
+            <ref name="unclear"/>
+            <ref name="ab_sub"/>
+            <ref name="pb"/>
+            <ref name="closer"/>
+            <ref name="opener"/>
+            <ref name="name"/>
+            <ref name="servingTip"/>
+            <ref name="dietetics"/>
+            <ref name="tool"/>
+            <ref name="foreign"/>
+            <ref name="time"/>
+          </choice>
+        </zeroOrMore>
+
+      </interleave>
+    </element>
+  </define>
+
+  <define name="foreign">
+    <element name="foreign">
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="unclear"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="lb">
+    <element name="lb">
+      <attribute name="n">
+        <data type="NCName"/>
+      </attribute>
+    </element>
+  </define>
+  <define name="note">
+    <element name="note">
+      <optional>
+        <attribute name="corresp"/>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <!-- <ref name="q"/>
+          <ref name="abbr"/>
+          <ref name="g"/>
+          <ref name="supplied"/>
+          <ref name="unclear"/>-->
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ref">
+    <element name="ref">
+      <attribute name="target">
+        <data type="anyURI"/>
+      </attribute>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="tool"></ref>
+          <ref name="dish"></ref>
+          <ref name="ingredient"></ref>
+          <ref name="name"/>
+          <ref name="pb"/>
+          <ref name="religion"></ref>
+          <ref name="alternative"></ref>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="graphic">
+    <element name="graphic">
+      
+      <optional>
+        <attribute name="facs"/>
+      </optional>
+      
+      <optional>
+        <attribute name="corresp"/>
+      </optional>
+      <optional>
+        <attribute name="mimeType"/>
+      </optional>
+      <optional>
+        <attribute name="url">
+          <data type="anyURI"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ana"/>
+      </optional>
+      
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="ID"/>
+      </attribute>
+      
+    </element>
+  </define>
+  <!--start body tags-->
+  <define name="alternative">
+    <element name="alternative">
+
+      <attribute name="reason">
+        <choice>
+          <value>ingredient</value>
+          <value>instruction</value>
+          <value>tool</value>
+          <value>amount</value>
+          <value>serving</value>
+          <value>phrasing</value>
+          <value>condition</value>
+          <value>dish</value>
+          <value>title</value>
+        </choice>
+      </attribute>
+
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="sp"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="date"/>
+          <ref name="householdTip"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="religion"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+        </choice>
+      </zeroOrMore>
+
+    </element>
+  </define>
+  <define name="closer">
+    <element name="closer">
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+        <attribute name="ana">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="sp"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="householdTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="date">
+    <element name="date">
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="language"/>
+      </attribute>
+      <optional>
+        <attribute name="when">
+          <data type="gYear"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="notAfter">
+          <data type="gYear"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="notBefore">
+          <data type="gYear"/>
+        </attribute>
+      </optional>
+          <text/>
+    </element>
+  </define>
+  <define name="dietetics">
+    <element name="dietetics">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="pb"/>
+          <ref name="date"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="servingTip">
+    <element name="servingTip">
+      <optional>
+        <choice>
+          <attribute name="rel">
+            <data type="NCName"/>
+          </attribute>
+          <attribute name="ana">
+            <choice>
+              <value>dietetics</value>
+            </choice>
+          </attribute>
+        </choice>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="sp"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="householdTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ab_main">
+    <element name="ab">
+
+      <attribute name="n">
+        <data type="integer"/>
+      </attribute>
+
+      <optional>
+        <attribute name="part">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ref">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+
+      <attribute name="type">
+
+        <choice>
+          <value>recipe</value>
+          <value>medicinal</value>
+          <value>introduction</value>
+          <value>kitchenTip</value>
+          <value>servingTip</value>
+          <value>household</value>
+          <value>dietetics</value>
+          <value>artTechnology</value>
+          <value>alternativeRecipe</value>
+        </choice>
+
+      </attribute>
+
+
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="ID"/>
+      </attribute>
+
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="NCName"/>
+      </attribute>
+
+
+      <interleave>
+
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="sp"/>
+            <ref name="title_body"/>
+            <ref name="ref"/>
+            <ref name="alternative"/>
+            <ref name="dish"/>
+            <ref name="ingredient"/>
+            <ref name="instruction"/>
+            <ref name="kitchenTip"/>
+            <ref name="householdTip"/>
+            <ref name="religion"/>
+            <ref name="date"/>
+            <ref name="pb"/>
+            <ref name="unclear"/>
+            <ref name="ab_sub"/>
+            <ref name="closer"/>
+            <ref name="opener"/>
+            <ref name="name"/>
+            <ref name="servingTip"/>
+            <ref name="dietetics"/>
+            <ref name="tool"/>
+            <ref name="foreign"/>
+            <ref name="note"/>
+            <ref name="time"/>
+          </choice>
+        </zeroOrMore>
+
+      </interleave>
+    </element>
+  </define>
+  <define name="name">
+    <element name="name">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="ingredient"/>
+          <ref name="dish"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ab_sub">
+    <element name="ab">
+
+      <attribute name="n">
+        <data type="integer"/>
+      </attribute>
+
+      <optional>
+        <attribute name="part">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ref">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+
+      <attribute name="type">
+        <choice>
+          <value>recipe</value>
+          <value>medicinal</value>
+          <value>introduction</value>
+          <value>kitchenTip</value>
+          <value>household</value>
+        </choice>
+      </attribute>
+      <attribute name="subtype">
+        <value>subrecipe</value>
+      </attribute>
+
+
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="ID"/>
+      </attribute>
+
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">lang</name>
+        <data type="NCName"/>
+      </attribute>
+
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <choice>
+            <ref name="sp"/>
+            <ref name="title_body"/>
+            <ref name="ref"/>
+            <ref name="alternative"/>
+            <ref name="dish"/>
+            <ref name="ingredient"/>
+            <ref name="instruction"/>
+            <ref name="kitchenTip"/>
+            <ref name="householdTip"/>
+            <ref name="religion"/>
+            <ref name="date"/>
+            <ref name="pb"/>
+            <ref name="unclear"/>
+            <ref name="ab_sub"/>
+            <ref name="closer"/>
+            <ref name="opener"/>
+            <ref name="name"/>
+            <ref name="servingTip"/>
+            <ref name="dietetics"/>
+            <ref name="tool"/>
+            <ref name="note"/>
+            <ref name="time"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  <define name="opener">
+    <element name="opener">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="householdTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="unclear">
+    <element name="unclear">
+      <text/>
+    </element>
+  </define>
+  <define name="religion">
+    <element name="religion">
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="date"/>
+          <ref name="pb"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="title_body">
+    <element name="title">
+      <optional>
+        <attribute name="type">
+          <choice>
+            <value>none</value>
+            <value>chapter</value>
+            <value>collection</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="corresp">
+          <list>
+            <oneOrMore>
+              <data type="anyURI"/>
+            </oneOrMore>
+          </list>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="key">
+          <text/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute>
+          <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+          <data type="ID"/>
+        </attribute>
+      </optional>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="sp"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="householdTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <!--<ref name="title"/>-->
+          <ref name="foreign"/>
+        </choice>
+      </zeroOrMore>
+    </element>
+  </define>
+  <define name="pb">
+    <element name="pb">
+      <attribute name="n">
+        <data type="NMTOKEN"/>
+      </attribute>
+      <attribute>
+        <name ns="http://www.w3.org/XML/1998/namespace">id</name>
+        <data type="ID"/>
+      </attribute>
+    </element>
+  </define>
+  <define name="instruction">
+    <element name="instruction">
+      <optional>
+        <attribute name="en"/>
+      </optional>
+      <optional>
+        <attribute name="key"/>
+      </optional>
+      <optional>
+        <attribute name="qualification">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="sp"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="householdTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+          <ref name="note"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="time">
+    <element name="time">
+      <optional>
+        <attribute name="duration">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="n">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="date"/>
+          <ref name="religion"/>
+          <ref name="alternative"/>
+          <ref name="pb"/>
+          <ref name="ref"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="ingredient">
+    <element name="ingredient">
+      <attribute name="commodity"/>
+      <attribute name="en"/>
+      <optional>
+        <attribute name="cert">
+          <data type="integer"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ana">
+          <choice>
+            <value>comparison</value>
+            <value>exclusion</value>
+            <value>analogy</value>
+          </choice>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="condition"/>
+      </optional>
+      <optional>
+        <attribute name="quality">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="quantity"/>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="dish"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="dish">
+    <element name="dish">
+      <optional>
+        <attribute name="commodity"/>
+      </optional>
+      <optional>
+        <attribute name="quality">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="ref"/>
+      </optional>
+      <optional>
+        <attribute name="en"/>
+      </optional>
+      <interleave>
+        <text/>
+        <zeroOrMore>
+          <ref name="ingredient"/>
+          <ref name="pb"/>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  <define name="kitchenTip">
+    <element name="kitchenTip">
+      <optional>
+        <attribute name="rel">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="sp"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="householdTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="householdTip">
+    <element name="householdTip">
+      <optional>
+        <attribute name="rel">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="type">
+          <data type="NCName"/>
+        </attribute>
+      </optional>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="sp"/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="ab_sub"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="tool">
+    <element name="tool">
+      <optional>
+        <attribute name="commodity"/>
+      </optional>
+      <optional>
+        <attribute name="en"/>
+      </optional>
+      <text/>
+    </element>
+  </define>
+  <define name="sp">
+    <element name="sp">
+      <attribute name="ana"/>
+      <oneOrMore>
+        <choice>
+          <text/>
+          <ref name="ref"/>
+          <ref name="alternative"/>
+          <ref name="dish"/>
+          <ref name="ingredient"/>
+          <ref name="instruction"/>
+          <ref name="kitchenTip"/>
+          <ref name="religion"/>
+          <ref name="date"/>
+          <ref name="pb"/>
+          <ref name="unclear"/>
+          <ref name="closer"/>
+          <ref name="opener"/>
+          <ref name="name"/>
+          <ref name="servingTip"/>
+          <ref name="dietetics"/>
+          <ref name="tool"/>
+          <ref name="time"/>
+          <ref name="title_body"/>
+          <ref name="foreign"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+
+
+</grammar>

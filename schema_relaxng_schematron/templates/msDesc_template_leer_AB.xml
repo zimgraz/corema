@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../corema_schema/corema_glyph.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../corema_schema/corema_glyph.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Electronic transcription of "Signatur"</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>Hyperdiplomatische Basistranskription der Handschrift ...</edition>
+                <editor>
+                    <forename>Astrid</forename>
+                    <surname>Böhm</surname>
+                </editor> 
+                <principal>
+                    <forename>Helmut W.</forename>
+                    <surname>Klug</surname>
+                </principal>
+                <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>
+                    <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, Universität Graz</orgName>
+                </publisher>
+                <authority>
+                    <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+                    <orgName ref="http://d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+                        Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
+                </authority>
+                <distributor>
+                    <ref target="https://gams.uni-graz.at"></ref>
+                    <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY 4.0</licence>
+                    <licence n="facsimile" target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons BY-NC-SA 4.0 </licence>
+                </availability>
+                <date when="2020"></date>
+                <pubPlace>Graz</pubPlace>
+                <idno type="PID">o:corema.</idno><!-- da muss rein: o:corema.a1 oder o:corema.bs2 usw. -->
+                <ref target="context:corema" type="context"/>
+                <ref target="context:corema.glyph" type="context"/>
+            </publicationStmt>
+            <sourceDesc>
+                
+                <msDesc> 
+                    <msIdentifier> 
+                        <country>LAND</country> 
+                        <settlement>STADT</settlement> 
+                        <institution ref="<!-- Link auf Startseite der Bibliothek -->">BIBL/UNI/ARCHIV</institution> 
+                        <repository>UNTERBATEILUNG ODER GLEICH WIE INSTIT.</repository> <!-- @C brauch ich nicht, TEI auch nicht, wenn gleich wie Institution, dann streichen -->
+                        <idno ref="<!-- Link auf digitales Faksimile insofern vorhanden -->">BIB-SIGN</idno> <!-- nur Sigle, komplette Signatur baut sich zusammen ; the official name.-->
+                        <msName>VULGONAME FALLS VORHADEN</msName> 
+                        <altIdentifier type="abbr"> <!-- Corema-Kurzsigle / Element kann mehrfach vorkommen, wenn zb alte Signatur einer Bib. -->
+                            <idno>COREMA-ABBR</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+                    
+                    <msContents>
+                        <textLang ana="manuscript"><lang ana="main" n="Q29540">Bavarian</lang>Bairisch mit mdt. Merkmalen.</textLang>
+                        <!-- wenn mehr Infos vorhanden, dann ein <lang> nur um die Sprache und dann weiter im <textLang> s.a Gr1.  -->
+                    </msContents>
+                    
+                    <physDesc> 
+                        <objectDesc form="composite-Manuscript"> <!-- oder 'fragment', 'codex', 'scroll' usw ; -->
+                            <supportDesc > 
+                                
+                                <extent> 
+                                    <measure unit="leaf" type="leavesCount">FOLIOZAHL</measure> 
+                                    <dimensions type="block" unit="mm">
+                                        <height></height>
+                                        <width></width>
+                                    </dimensions> 
+                                </extent>
+                                
+                                <foliation>  
+                                    <ab type="completeness"></ab> 
+                                    <ab type="hand"></ab>  
+                                </foliation> 
+                                
+                                
+                                
+                                <collation> 
+                                    <formula style="chroust"></formula> 
+                                    <ab></ab>
+                                    <catchwords>INFOS  ZU KUSTODEN</catchwords> 
+                                    <locusGrp> <!--detailierte Lagenbeschreibung mgl., s.Bsp. Gr1 -->
+                                        <locus>FOLIO VON BIS</locus> 
+                                    </locusGrp> 
+                                </collation>
+                                
+                                <condition> 
+                                    <desc>TEXT</desc> <!-- wenn hier ganz viel steht, dann <lb/> erlaubt (s.Wo5) -->
+                                    <material xml:lang="de">Papier</material>
+                                    <material xml:lang="en">paper</material>
+                                    <watermark xml:id="Wassezzeichensymbol">  
+                                        <!-- wenn hier ganz viel steht, dann <lb/> erlaubt (s.Ha1) / wenn sich Wasserzeichen verorten lassen, s. Gr1  -->
+                                        <!--<locusGrp>         
+                                            <locus></locus>
+                                        </locusGrp>-->
+                                    </watermark>
+                                </condition>
+                            </supportDesc>
+                            
+                            <layoutDesc> 
+                                <layout columns="ANZAHL"> <!-- HIER  DIE KOLUMNENANZAHL REIN, 1, 2 oder 3  je nach dem-->
+                                    <p ana="measure">X-X</p>
+                                    <p ana="textblock">zb zweispaltig</p>
+                                    <p ana="lines">X-X</p>
+                                    <p ana="text">TEXT....</p> 
+                                    <p ana="notula">TEXT....</p>
+                                    <p ana="gloss">TEXT....</p> 
+                                </layout>
+                                
+                            </layoutDesc>
+                            
+                        </objectDesc>
+                        
+                        <handDesc><!-- allgemeines zu den Schreiberhänden, zB durch <handDesc @hands="2"> heißt MS weist 2 Hände auf usw. -->
+                            <handNote></handNote> <!-- <handNote ana="1"> mit @ kann ich auf eine bestimmte Hand hinweisen. -->
+                        </handDesc>
+                        <scriptDesc resp="Astrid Böhm"><ab></ab></scriptDesc> <!-- hier müsste die Handbeschreibung rein, wennn zwei Beschreibungen, dann mit ab in der ersten Note arbeiten, s. M5 -->
+                        
+                        <bindingDesc> 
+                            <binding corresp="#Einband"> 
+                                <condition></condition>
+                                <decoNote type="bindingMaterial"></decoNote>
+                                <decoNote type="decoration">Verzierunge jeglicher Art</decoNote>
+                                <decoNote type="metal"></decoNote>
+                                <decoNote type="clasps">Schnallen</decoNote>
+                                <decoNote type="spine">Buchrücken</decoNote>
+                                <decoNote type="added"></decoNote>
+                                <decoNote type="wastepaper">Makulatur, altes schon mal benutzes Papier </decoNote>
+                                <decoNote type="decoPlaceDate">
+                                    <origDate>zb eingeprägte Jahreszahl</origDate>
+                                </decoNote>
+                                <!-- wenn vorhanden -->
+                                
+                            </binding>
+                        </bindingDesc>
+                    </physDesc>
+                    
+                    <history>
+                        
+                        <origin> 
+                            <origDate><date xml:lang="de" notBefore="1450" notAfter="1500">Text and/or dates</date> <!-- bei exakter Datierung when="JAHRESZAHL" -->
+                                        <date xml:lang="en" notBefore="1450" notAfter="1500">2nd half of 15th c.</date>
+                            </origDate>
+                            <note></note>
+                            <origDate corresp="#">JAHR</origDate><!-- wenn eine Datierung auf einem Folio ist, dann hinter # die Folioangabe und als Elementeninhalt die Jahreszahl -->
+                            <origPlace>
+                                <placeName xml:lang="de">Entstehungsort unbekannt</placeName>
+                                <placeName xml:lang="en">place of origin unknown</placeName>
+                                <!--hier noch TEXT mgl., aber NICHT vor placeName!--></origPlace>
+                            <!-- Entstehungsort MUSS eingetragen werden, wenn mehr Infos dann innerhalb von <origPlace> ein <placeName> nur um den Ort/Info , s.a. Gr1-->
+                        </origin> 
+                        
+                        <provenance>Provinienz falls bekannt</provenance> 
+                        
+                        <acquisition>TEXT letzer 'Schritt' wie die HS an den aktuellen Ort gekommen ist, zb. Besitzvermerk usw
+                            <signatures>Beschreibung von Stempel, Seitenangebn usw</signatures>
+                        </acquisition>
+                        
+                    </history>
+                    
+                    <!-- allgemeine Teile / -->
+                    <msPart n="x-y">
+                        <msContents>
+                            <textLang><!-- wenn zwei sprachen dann so, ansonsten nur die 'main' Sprache   -->
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang>
+                                <lang ana="other" n="Q1163234">Medieval Latin</lang>
+                            </textLang>
+                            <msItem>
+                                <locus ana="folio">Folio bis Folio</locus>
+                                <title>bla</title>
+                                <note>bla</note><!-- kann -->
+                            </msItem>
+                        </msContents>
+                    </msPart>
+                    
+                    <!-- Kopiervorlage -->
+                    <msPart n="">
+                        <msContents>
+                            <textLang>
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang>
+                                <lang ana="other" n="Q1163234">Medieval Latin</lang>
+                            </textLang>
+                            <msItem>
+                                <locus ana="folio"></locus>
+                                <title></title>
+                                <note></note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+                    
+                    <!-- Teil Kochrezept ALLES GLEICH NUR ZUSÄTZLICH HEAD + ANA
+                    wenn keine Sprache eingetragen ist, dann darf auch keine note rein, die note wird ohne Sprache nicht ausgelesen (zb bei leerem Blatt oder Zeichnung usw)-->
+                    <msPart ana="cooking_recipes" n="">
+                        <head></head>
+                        <msContents>
+                            <textLang>
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang></textLang>
+                            <msItem>
+                                <locus ana="folio"></locus> 
+                                <title></title> 
+                                <note></note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+                </msDesc>
+                
+                <listBibl type="transcriptions">
+                    <bibl></bibl> 
+                    <bibl>Transkription Astrid Böhm</bibl>
+                </listBibl>
+                <!--<listBibl type="translations">
+                    <bibl>analogue text</bibl> 
+                </listBibl>-->
+                <listBibl type="catalogues">
+                    <bibl>Katalogisat</bibl>
+                    <bibl>Christine Glaßner: München, Staatsbibl., Clm 15632. In: Handschriftencensus. 2017. Url: <ref target="http://www.handschriftencensus.de/6394">http://www.handschriftencensus.de/6394</ref>.</bibl>
+                </listBibl>
+                
+                <citedRange unit="page"></citedRange> <!-- wenn ich auf bestimmte Seiten verweisen will, als letztes innerhalb von: biblStruct -->
+                <note type="display">Schnell, B. and Crossgrove, W. (2003) <hi rend="italic">Der deutsche ‚Macer‘. Vulgatafassung. Mit einem Abdruck des lateinischen Macer Floridus ‚De viribus herbarum‘</hi>. Tübingen: Niemeyer, cf. p. 181.
+                </note> <!-- mit ref=target bei URL, ganzes note Element als letztes bei <biblStruct> -->
+                
+                <listBibl type="digital facsimiles">
+                    <bibl><ref target="http://www....">Name der Institution</ref></bibl>
+                </listBibl>
+                
+                <!--<listBibl type="manuscript descriptions">
+                    <bibl></bibl> 
+                    <bibl>text</bibl>
+                </listBibl>
+                <listBibl type="research literature">
+                    <bibl>URL</bibl> 
+                    <bibl>Printbook</bibl>
+                    <bibl>usw</bibl>
+                </listBibl>-->
+            </sourceDesc>
+        </fileDesc>
+        
+        <revisionDesc>
+            <listChange prev="<!-- letzte Verison die bereits auf gams sthet -->">
+                <change when="2021-01-21" who="Böhm">
+                    <ab corresp="125r11">insofern man Bezug nehem kann auf ein Folio, ansonsten ohne 'corresp' und nur Text eintragen</ab>
+                </change>
+                <change when="2021-02-01" who="Böhm">
+                    <ab>Attribute ref added to institution (msIdentifier)</ab>
+                </change>
+            </listChange>
+        </revisionDesc>
+        
+        <!-- Encoding Desc hier einfügen, nur wenn besonderheiten in der Transkription zu beachten sind-->
+        <!--<encodingDesc>
+            <ab>
+                <note>Bsp. B5: Doppelpunktförmiges Gliederungszeichen als Virgel transkribiert. </note>
+            </ab>
+        </encodingDesc>-->
+        
+        
+        
+    </teiHeader>
+    
+    <facsimile>
+    <surface start="#">
+        <graphic xml:id="CUTOUT" url="cutouts/n1.jpg"></graphic> <!-- als letztes Element bei den facsimiles das hier einfügen, mit dem jeweils richtigen img -->
+    </surface>
+    </facsimile>
+    
+    <text>
+        <body>
+            <p>Transkription</p>
+        </body>
+    </text>
+</TEI>
+
+
+

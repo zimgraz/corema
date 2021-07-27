@@ -1,0 +1,1644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../Schema/recipes.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Schema/corema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Electronic transcription of Graz, UB, Ms. 1609</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>Hyperdiplomatische Basistranskription der Handschrift Graz, UB, Ms. 1609</edition>
+                <editor>
+                    <forename>Astrid</forename>
+                    <surname>Böhm</surname>
+                </editor>
+                <editor>
+                    <forename>Karin</forename>
+                    <surname>Kranich</surname>
+                </editor>
+                <principal>
+                    <forename>Helmut W.</forename>
+                    <surname>Klug</surname>
+                </principal>
+                <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>
+                    <ref target="https://informationsmodellierung.uni-graz.at"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463"
+                        >ZIM-ACDH, Universität Graz</orgName>
+                </publisher>
+                <authority>
+                    <ref target="https://informationsmodellierung.uni-graz.at"/>
+                    <orgName ref="http://d-nb.info/gnd/1137284463"
+                        >Zentrum für Informationsmodellierung -
+            Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
+                </authority>
+                <distributor>
+                    <ref target="https://gams.uni-graz.at"/>
+                    <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+                </distributor>
+                <availability>
+                    <licence n="text" target="https://creativecommons.org/licenses/by/4.0"
+                        >Creative Commons BY
+            4.0</licence>
+                    <licence n="manuscript facsimiles"
+                        target="https://creativecommons.org/licenses/by-nc-sa/3.0/at/"
+                        >Creative Commons BY-NC-SA
+            3.0 </licence>
+                </availability>
+                <date when="2020"/>
+                <pubPlace>Graz</pubPlace>
+                <idno type="PID">o:corema.gr1</idno>
+                <ref target="context:corema" type="context"/>
+            </publicationStmt>
+            <sourceDesc>
+
+                <msDesc>
+                    <msIdentifier>
+                        <country>Austria</country>
+                        <region>Styria</region>
+                        <settlement>Graz</settlement>
+                        <institution>Karl-Franzens-Universität Graz</institution>
+                        <repository>Universitätsbibliothek</repository>
+                        <idno>Graz, UB, Ms. 1609</idno>
+                        <altIdentifier type="abbr">
+                            <idno>Gr1</idno>
+                        </altIdentifier>
+                        <altIdentifier>
+                            <idno>34/8</idno>
+                        </altIdentifier>
+                    </msIdentifier>
+
+
+                    <msContents>
+                        <textLang ana="manuscript"
+                            >Es handelt sich um eine deutsch-lateinische Mischhandschrift,
+              mittellateinische und frühneuhochdeutschsprachige Texte stehen unmittelbar
+              nebeneinander. Von rund 940 Seiten Gesamtbestand sind ca. 216 Seiten, also schwach ein
+              Viertel, lateinischer Text. Dieser begegnet in einzelnen Passagen, die als Gesamttext
+              lateinisch abgefasst sind, wie z.B. die Teile der Benediktinerregel (fol. 30Qr-302v)
+              oder ein Pesttraktat (fol. 264v-266v), aber auch immer wieder in rezeptartigen
+              Einzeleinträgen, wobei hier Latein und Volkssprache in solchen 'Rezept-Passagen' öfter
+              unmittelbar vermischt nebeneinander stehen - und zwar sowohl im Sinne einer Abfolge
+              von deutschen und lateinischen Rezepten als auch von lateinischen Einsprengseln, meist
+              stehenden, formelartigen Wendungen oder auch Fachtermini, innerhalb eines Kurztextes.
+              Ein müheloses und selbstverständliches Wechseln zwischen den Sprachen muss also sowohl
+              dem Initiator der Handschrift als auch deren Benutzern möglich gewesen sein.
+              (Kranich-Hofbauer 2003, 609)</textLang>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc form="composite-Manuscript">
+                            <supportDesc>
+                                <extent>
+                                    <measure unit="leaf" type="leavesCount">469</measure>
+                                    <dimensions type="block" unit="mm">
+                                        <height>140</height>
+                                        <width>110</width>
+                                    </dimensions>
+                                </extent>
+                                <foliation>
+                                    <ab type="completeness"
+                                        > Der Buchblock besteht aus 38 Lagen, die zwischen fünf und
+                    neun Blatt Stärke aufweisen. Eine neuzeitliche durchlaufende Bleistiftfoliierung
+                    jeweils in der rechten oberen Ecke der Rectoseiten erleichtert heute die
+                    Orientierung innerhalb der Handschrift. (Kranich-Hofbauer 2003, 605)</ab>
+                                </foliation>
+                                <collation>
+                                    <formula style="chroust"
+                                        >2.V + 5.VI + IX + 2.VI + V +IV + 2.VI + V + (VI+3) + IX+
+                    + 3.VI + V + VI + V + (Vl+1) + VII + VI + (VIII-1) + VIII-2) + 2.VI + (VIII-1) +
+                    4.VI + (VI+1) + V + VI (Kiewisch 1994, 118)</formula>
+                                    <catchwords>Wortreklamanten in mehreren Abschnitten gewährleisteten den korrekten
+                    Bindevorgang zusammengehöriger Lagen. Alle Lagen weisen ein für das Endformat
+                    mehr oder minder verträgliches Maß auf - nur bei den Lagen 22 und 31 entstand
+                    durch das buchbinderische Beschneiden geringfügiger Textverlust.
+                    (Kranich-Hofbauer 2003, 605)</catchwords>
+                                    <locusGrp>
+                                        <locus xml:id="Einbandvorne">Deckel vorne</locus>
+                                        <locus xml:id="Einbandhinten">Deckel hinten</locus>
+                                        <locus xml:id="Spiegelvorne">Spiegel vorne</locus>
+                                        <locus xml:id="Spiegelhinten">Spiegel hinten</locus>
+                                        <locus xml:id="Einbandruecken">Buchrücken</locus>
+                                    </locusGrp>
+                                    <locusGrp>
+                                        <locus from="1r" n="L01" to="10v" xml:id="L01_leer"
+                                            >1r-10v</locus>
+                                        <locus from="11r" n="L02" to="20v" xml:id="L02"
+                                            >11r-20v</locus>
+                                        <locus from="21r" n="L03" to="32v" xml:id="L03"
+                                            >21r-32v</locus>
+                                        <locus from="33r" n="L04" to="44v" xml:id="L04"
+                                            >33r-44v</locus>
+                                        <locus from="45r" n="L05" to="56v" xml:id="L05"
+                                            >45r-56v</locus>
+                                        <locus from="57r" n="L06" to="68v" xml:id="L06"
+                                            >57r-68v</locus>
+                                        <locus from="69r" n="L07" to="80v" xml:id="L07"
+                                            >69r-80v</locus>
+                                        <locus from="81r" n="L08" to="98v" xml:id="L08"
+                                            >81r-98v</locus>
+                                        <locus from="99r" n="L09" to="110v" xml:id="L09_leer"
+                                            >99r-110v</locus>
+                                        <locus from="111r" n="L10" to="122v" xml:id="L10_leer"
+                                            >111r-122v</locus>
+                                        <locus from="123r" n="L11" to="134v" xml:id="L11_leer"
+                                            >123r-134v</locus>
+                                        <locus from="135r" n="L12" to="142v" xml:id="L12"
+                                            >135r-142v</locus>
+                                        <locus from="143r" n="L13" to="154v" xml:id="L13"
+                                            >143r-154v</locus>
+                                        <locus from="155r" n="L14" to="166v" xml:id="L14"
+                                            >155r-166v</locus>
+                                        <locus from="167r" n="L15" to="178v" xml:id="L15"
+                                            >167r-178v</locus>
+                                        <locus from="179r" n="L16" to="193v" xml:id="L16"
+                                            >179r-193v</locus>
+                                        <locus from="194r" n="L17" to="209v" xml:id="L17"
+                                            >194r-209v</locus>
+                                        <locus from="210r" n="L18" to="222v" xml:id="L18"
+                                            >210r-222v</locus>
+                                        <locus from="223r" n="L19" to="234v" xml:id="L19"
+                                            >223r-234v</locus>
+                                        <locus from="235r" n="L20" to="246v" xml:id="L20"
+                                            >235r-246v</locus>
+                                        <locus from="247r" n="L21" to="256v" xml:id="L21"
+                                            >247r-256v</locus>
+                                        <locus from="257r" n="L22" to="268v" xml:id="L22"
+                                            >257r-268v</locus>
+                                        <locus from="269r" n="L23" to="278v" xml:id="L23"
+                                            >269r-278v</locus>
+                                        <locus from="279r" n="L24" to="290v" xml:id="L24"
+                                            >279r-290v</locus>
+                                        <locus from="291r" n="L25" to="305v" xml:id="L25"
+                                            >291r-305v</locus>
+                                        <locus from="306r" n="L26" to="317v" xml:id="L26"
+                                            >306r-317v</locus>
+                                        <locus from="318r" n="L27" to="334v" xml:id="L27"
+                                            >318r-334v</locus>
+                                        <locus from="335r" n="L28" to="348v" xml:id="L28"
+                                            >335r-348v</locus>
+                                        <locus from="349r" n="L29" to="360v" xml:id="L29"
+                                            >349r-360v</locus>
+                                        <locus from="361r" n="L30" to="372v" xml:id="L30"
+                                            >361r-372v</locus>
+                                        <locus from="373r" n="L31" to="387v" xml:id="L31"
+                                            >373r-387v</locus>
+                                        <locus from="388r" n="L32" to="399v" xml:id="L32"
+                                            >388r-399v</locus>
+                                        <locus from="400r" n="L33" to="411v" xml:id="L33"
+                                            >400r-411v</locus>
+                                        <locus from="412r" n="L34" to="423v" xml:id="L34"
+                                            >412r-423v</locus>
+                                        <locus from="424r" n="L35" to="435v" xml:id="L35"
+                                            >424r-435v</locus>
+                                        <locus from="436r" n="L36" to="448v" xml:id="L36"
+                                            >436r-448v</locus>
+                                        <locus from="449r" n="L37" to="458v" xml:id="L37"
+                                            >449r-458v</locus>
+                                        <locus from="459r" n="L38" to="SPv" xml:id="L38"
+                                            >459r-469v-SPv</locus>
+                                    </locusGrp>
+                                </collation>
+                                <condition>
+                                    <desc> Der Buchblock lässt die einzelnen Lagen deutlich erkennen, der Schnitt ist
+                    nicht ganz exakt. Die Schnittfläche oben ist stark verschmutzt, was auf eine
+                    zumindest zeitweise stehende, oben offene Lagerung hinweist. Die Ecken der
+                    Einzelblätter sind oben und unten allesamt abgestoßen und erscheinen wie
+                    abgerundet. Sowohl Einband als auch Buchblock zeigen also starke
+                    Benutzungsspuren. (Kranich-Hofbauer 2003, 604)</desc>
+                                    <material>Papier</material>
+                                    <watermark xml:id="WaageKreis"> Waage in Kreis 
+                    <locusGrp>
+                                            <locus corresp="#L01_leer"/>
+                                            <locus corresp="#L03"/>
+                                            <locus corresp="#L04"/>
+                                            <locus corresp="#L05"/>
+                                            <locus corresp="#L06"/>
+                                            <locus corresp="#L08"/>
+                                            <locus corresp="#L09_leer"/>
+                                            <locus corresp="#L10_leer"/>
+                                            <locus corresp="#L11_leer"/>
+                                            <locus corresp="#L12"/>
+                                            <locus corresp="#L13"/>
+                                            <locus corresp="#L16" n="193">Folio 193</locus>
+                                            <locus corresp="#L17"/>
+                                            <locus corresp="#L18"/>
+                                            <locus corresp="#L20"/>
+                                            <locus corresp="#L21"/>
+                                            <locus corresp="#L22"/>
+                                            <locus corresp="#L29"/>
+                                            <locus corresp="#L35"/>
+                                            <locus corresp="#L36"/>
+                                            <locus corresp="#L37"/>
+                                            <locus corresp="#L38"/>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="AnkerKreis1"> Anker im Kreis Motiv 1 
+                    <locusGrp>
+                                            <locus corresp="#L02"/>
+                                            <locus corresp="#L07"/>
+                                            <locus corresp="#L30"/>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="AnkerKreis2"> Anker im Kreis Motiv 2 
+                    <locusGrp>
+                                            <locus corresp="#L19"/>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="DreibergKreis1"> Dreiberg im Kreis Motiv 1 
+                    <locusGrp>
+                                            <locus corresp="#L32"/>
+                                            <locus corresp="#L33"/>
+                                            <locus corresp="#L34"/>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="DreibergKreis2"> Dreiberg im Kreis Motiv 2 
+                    <locusGrp>
+                                            <locus corresp="#L25"/>
+                                            <locus corresp="#L26"/>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="DreibergKreuz"> Dreiberg im Kreuz 
+                    <locusGrp>
+                                            <locus corresp="#L24"/>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="nichtidentifizierbar"> zusammengehörige Blätter, Papier nicht
+                    identifizierbar 
+                    <locusGrp>
+                                            <locus corresp="#L16" n="192">Folio 192</locus>
+                                            <locus corresp="#L28" n="348">Folio 348</locus>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="Ochsenkopf"> Ochsenkopf 
+                    <locusGrp>
+                                            <locus corresp="#L23"/>
+                                            <locus corresp="#L31" n="TT">Folio TT</locus>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="Blume"> Blume 
+                    <locusGrp>
+                                            <locus corresp="#L14"/>
+                                            <locus corresp="#L15"/>
+                                            <locus corresp="#L16">ausgenommen Folio 183</locus>
+                                            <locus corresp="#L16"
+                                                >ausgenommen eingeklebtes Folio T zwischen 187 und
+                        188</locus>
+                                            <locus corresp="#L16">ausgenommen Folio 192</locus>
+                                            <locus corresp="#L16">ausgenommen Folio 193</locus>
+                                        </locusGrp>
+                                    </watermark>
+                                    <watermark xml:id="unklar"> Unklar 
+                    <locusGrp>
+                                            <locus corresp="VS"/>
+                                            <locus corresp="#L16">Folio 183</locus>
+                                            <locus corresp="#L16"
+                                                >eingeklebtes Folio T zwischen 187 und 188</locus>
+                                            <locus corresp="#L27"/>
+                                            <locus corresp="#L28"/>
+                                            <locus corresp="#L31"/>
+                                            <locus corresp="#L38">Spiegel hinten</locus>
+                                        </locusGrp>
+                                    </watermark>
+                                </condition>
+                            </supportDesc>
+                            <!-- <layoutDesc>, alles zum Seitenspiegel, Schriftraum, Kolumnen usw. -->
+                        </objectDesc>
+                        <handDesc hands="35">
+                            <ab>35 bis 40 verschiedene Schreiber</ab>
+                        </handDesc>
+
+
+                        <scriptDesc facs="11r-94v">
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>allgemeine Beobachtung</desc>
+                                <p>Durchdachte Aufteilung, Rezepte beginnen jeweils mit eigener Zeile, Platz für nicht ausgeführte Initialen über zwei Zeilen</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Duktus</desc>
+                                <p>Wenn randlagig dann ausschweifende Zierstriche vorhanden</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Leitbuchstabe &lt;a&gt;</desc>
+                                <p>einstöckiges a</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Leitbuchstabe &lt;l&gt;</desc>
+                                <p>meist schleifenlos, vermehrt mit Schleife in finaler Stellung</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Leitbuchstabe &lt;g&gt;</desc>
+                                <p>geschlossene Punze, geschlossener Unterbogen</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Leitbuchstabe &lt;e&gt;</desc>
+                                <p>offene Punze, zweiteilig gebaut</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Leitbuchstabe &lt;m&gt;, &lt;n&gt;</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Langschäfte &lt;b&gt;, &lt;d&gt;, &lt;h&gt;, &lt;k&gt;, &lt;l&gt;</desc>
+                                <p>&lt;b&gt; mit und ohne Schleife; &lt;h&gt;, &lt;k&gt; mit Schleife</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>&lt;f&gt;, Schaft-s Unterlänge</desc>
+                                <p>‚normale‘ Unterlänge</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Verschiedene r-Formen</desc>
+                                <p>gerades und rundes r</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Verschiedene z-Formen</desc>
+                                <p>geschwänztes z</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Bögen/Unterlänge von &lt;h&gt;, &lt;y&gt; und geschwänztem z</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Verwendung von Schaft-s und rundem s</desc>
+                                <p>Schaft-s: initial + medialrundes s: final</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Verwendung von geradem und rundem d</desc>
+                                <p>&lt;d&gt; mit Schleife, teils offener Punze (Unterbogen)</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>i-Markierung</desc>
+                                <p>teilweise i-Punkte, y mit teils mit Punkten</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Besonderheiten anderer Grapheme</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Zahlzeichen</desc>
+                                <p>römische Ziffern / lat. Buchstaben</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Majuskeln (Verwendung)</desc>
+                                <p>Funktion der Initiale in Überschriften, Rezeptanfang</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Verzierungen</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Rubrizierung</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Diakritika</desc>
+                                <p>mit Vokalen überschriebene Graphe, strich-, tilden- und punktförmig  </p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Abbreviaturen</desc>
+                                <p>Kürzungsstrich, Kürzungshaken, ‚er‘-Kürzung bei finalem Schaft-s, ‚ur‘-, ,con‘-Kürzung bei lateinischen Einsprengseln</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Interpunktion</desc>
+                                <p>Virgel (teils um Worttrennung zu signalisieren)</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Terminatoren</desc>
+                                <p>unterschiedlicher Arten, Paragraphenzeichen, Punkt-Strich-Kombinationen</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Worttrennung</desc>
+                                <p>doppelstrichförmig</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Korrekturen</desc>
+                                <p>Streichungen, Umstellungen</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 11r–44v, 49r–94v">
+                                <desc>Offensichtliche Schreiberwechsel</desc>
+                                <p>fol. 45r–48v andere Hand, auf 49r setzt erste Hand mitten im Satz wieder fort</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>allgemeine Beobachtung</desc>
+                                <p>Rezepte durch Leerzeile voneinander abgesetzt, keine Initialen </p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Duktus</desc>
+                                <p>leicht nach rechts geneigt, flüchtig</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Leitbuchstabe &lt;a&gt;</desc>
+                                <p>einstöckiges a</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Leitbuchstabe &lt;l&gt;</desc>
+                                <p>mit und ohne Schleife</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Leitbuchstabe &lt;g&gt;</desc>
+                                <p>meist geschlossener Unterbogen</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Leitbuchstabe &lt;e&gt;</desc>
+                                <p>teils geschlossene Punze</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Leitbuchstabe &lt;m&gt;, &lt;n&gt;</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Langschäfte &lt;b&gt;, &lt;d&gt;, &lt;h&gt;, &lt;k&gt;, &lt;l&gt;</desc>
+                                <p>&lt;b&gt;, &lt;h&gt;, &lt;k&gt;, &lt;l&gt; meist ohne Schleife, wenn dann nicht stark ausgeprägt</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>&lt;f&gt;, Schaft-s Unterlänge</desc>
+                                <p>‚normale‘ Unterlänge</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Verschiedene r-Formen</desc>
+                                <p>gerades- und rundes-r</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Verschiedene z-Formen</desc>
+                                <p>geschwänztes z</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Bögen/Unterlänge von &lt;h&gt;, &lt;y&gt; und geschwänztem z</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Verwendung von Schaft-s und rundem s</desc>
+                                <p>regelkonforme Verwendung</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Verwendung von geradem und rundem d</desc>
+                                <p>&lt;d&gt; mit und ohne Schleife, teils offene Punze (Unterbogen)</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>i-Markierung</desc>
+                                <p>teilweise i-Punkte, &lt;y&gt; mit teils mit Punkten</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Besonderheiten anderer Grapheme</desc>
+                                <p>Schluss-s reicht deutlich in die Unterlänge</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Zahlzeichen</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Majuskeln (Verwendung)</desc>
+                                <p>Funktion der Initiale in Überschriften, Rezeptanfang</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Verzierungen</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Rubrizierung</desc>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Diakritika</desc>
+                                <p>&lt;u&gt; über &lt;o&gt;</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Abbreviaturen</desc>
+                                <p>Kürzungsstrich, Kürzungshaken, ‚er‘-Kürzung bei finalem Schaft-s</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Interpunktion</desc>
+                                <p>keine</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Terminatoren</desc>
+                                <p>keine</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Worttrennung</desc>
+                                <p>Doppelstriche</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Korrekturen</desc>
+                                <p>Tilgung durch Streichung, Expungierung</p>
+                            </scriptNote>
+                            <scriptNote source="fol. 45r–48v">
+                                <desc>Offensichtliche Schreiberwechsel</desc>
+                                <p>Hand 1 setzt auf fol. 49r wieder ein, Wechsel geschieht mit Foliowechsel mitten im Satz</p>
+                            </scriptNote>
+                        </scriptDesc>
+
+
+
+                        <bindingDesc>
+                            <binding corresp="#Einband">
+                                <condition>Die Holzdeckel sind mit braunem, heute fast schwarzem Kalbsleder bezogen.
+                  Die noch relativ gut erkennbaren Blindpressungen an der Vorderseite weisen mit
+                  allen Elementen auf eine Entstehung des Einbandes in der spätgotischen Zeit im
+                  süddeutschen Raum hin. Der Ledereinband des rückwärtigen Deckels ist so stark
+                  abgenutzt, dass von der geprägten, außen glatten Lederschicht kaum mehr etwas
+                  übrig ist und nur noch die inneren, raulederartigen Schichten den Holzdeckel
+                  umgeben. Die äußeren Ecken liegen allerdings bereits ganz frei. Zusammengehalten
+                  wurden die Deckel durch eine Messingschließe mit Lederband in der Mitte an der
+                  jeweils vorderen Kante. Das Lederband ist heute an der Deckelkante abgerissen.
+                  Beide Buchdeckel zeigen Spuren von Wurmfraß. (Kranich-Hofbauer 2003,
+                  603)</condition>
+
+                                <decoNote type="bindingMaterial">
+                                    <material>Holzdeckel</material>
+                                    <material>Ledereinband</material>
+                                    <material>Pergamentrücken</material>  </decoNote>
+                                <decoNote type="decoration">Blindpressungen</decoNote>
+                                <decoNote type="clasps"
+                                    >eine Messingschließe mit Lederband</decoNote>
+                                <decoNote type="spine">Pergament</decoNote>
+                                <decoNote type="wastepaper"
+                                    >Der Buchrücken besteht aus einem breiten
+                  Pergamentstreifen, der von einem Missale des 15. Jahrhunderts stammt. Auf dessen
+                  Innenseite ist allerdings ein bedrucktes Papierblatt zur Verstärkung kaschiert,
+                  auf dem unter anderem noch deutlich &quot;kayser Carolas VI. zu Wien&quot; zu
+                  lesen ist - der Buchrücken wurde also höchstwahrscheinlich im 18. Jahrhundert
+                  restauriert. Seither ersetzt der Pergamentrücken wohl den ehemals braunen
+                  Lederrücken. (Kranich-Hofbauer 2003, 603-604) </decoNote>
+                            </binding>
+                        </bindingDesc>
+
+
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <!-- @Helmut 20 Jahre rauf oder runter oder wie jetzt-->
+                            <origDate notBefore="1450" notAfter="1500"
+                                >zweite Hälfte 15. Jhd.</origDate>
+                            <origDate corresp="#252r">1488</origDate>
+                            <origDate corresp="#423v">1451</origDate>
+
+                            <origPlace cert="low"
+                                >Entstehungsort ist nicht genau bestimmbar, vermutl. ein Benediktinerkloster evtl. Kloster Tegernsee oder Kloster am Mondsee</origPlace>
+                            <orgName role="scriptorium">Mondseer Koch- und Haushaltsbuch</orgName>
+                            <note type="purpose">Gebrauchshandschrift</note>
+
+                        </origin>
+
+                        <provenance>
+                            <p xml:id="prov1"
+                                >Eindeutige Vorbesitzeinträge sind in der Handschrift nicht
+                aufzufinden, lediglich die UB Graz hat ihre unübersehbaren Spuren in Form der
+                Eintragung der alten Signatur 34/8 am vorderen Spiegelblatt und der beiden
+                Bibliotheksstempel vorne und hinten hinterlassen.</p>
+                            <p xml:id="prov2"
+                                    >Die Handschrift selbst gibt zwei vordergründige Anhaltspunkte: Auf
+                fol. 250v findet sich der Eintrag <emph
+                                    xml:lang="lat-med"
+                                    >Missa a M(a)g(ist)ro
+                  Michaele schrikh pro fratrib(us) In Tegennsee</emph> (sic!). Auf fol. 373r steht
+                eine zweite Zueignung: <emph
+                                    xml:lang="lat-med"
+                                    >p(ro) f(rat)re Georgio ortolano in
+                  Monsee Ex f(rat)re Cristanno in Teg(e)rnsee p(ro)fesso.</emph> Bemerkenswert ist,
+                dass die Ortsangabe <emph>in Monsee</emph> rasiert wurde und nur mehr mit Hilfe der
+                UV-Lampe, dann aber ganz eindeutig, zu sehen ist. Alle weiteren Personennennungen
+                sind für eine Provenienzbestimmung von vornherein als nicht nutzbar anzusehen, denn
+                sie gehören eher zum Typ der Quellennennung - wie z.B. fol. 279r : <emph
+                                    xml:lang="de-x-enh"
+                                    >Tractat des Wiener Doctors Johannes Rock</emph> oder fol. 275v:
+                  <emph
+                                    xml:lang="de-x-enh"
+                                    >Disz ist ein regime(n) meyst(er) appollonie zu meneze vor
+                  die pestile(n)cie.</emph> Doch auch die beiden Widmungsaussagen bringen uns nicht
+                wirklich auf eine heiße Spur. Einzig die Nennung von Tegernsee und Mondsee - beides
+                Benediktinerklöster im süddeutsch-österreichischen Raum - macht klar, dass der
+                Bezugspunkt &quot;Kloster&quot; in der Verortung der Handschrift eine maßgebliche
+                Rolle spielen muss. (Kranich-Hofbauer 2003, 606).</p>
+                            <p xml:id="prov3"
+                                    >Doch <emph>in Monsee</emph> ist rasiert - also aus irgendeinem Grund
+                getilgt - und Tegernsee wird, neben der Nennung als Namenbestandteil auf fol. <locus
+                                    corresp="#373r"
+                                >373r</locus> in der Überschrift zu einem Sendschreiben des Michael
+                Schrikh genannt, welches durchaus auch als Abschrift in die Handschrift aufgenommen
+                worden sein kann. Dies gilt eventuell genauso für die Ausführungen des Bruders
+                Christian von Tegernsee für Bruder Georg, den Gärtner von Mondsee. Aber auch wenn
+                beide Teile hier original eingetragen sind, haben die genannten Personen- und
+                Ortsnamen nur eben für diese Teile Aussagewert, - eine Überlegung, die alle
+                Ortsnamennennungen für eine räumliche Zuordnung des Ms. 1609 in seiner Gesamtheit
+                irrelevant werden lässt. Die Handschrift befindet sich heute in der
+                Universitätsbibliothek in Graz. Diese nahm einerseits die Bestände der alten Grazer
+                Jesuitenuniversität und andererseits die Bibliotheken der in den 80er Jahren des 18.
+                Jahrhunderts - im Zuge der Säkularisation - aufgelösten Klöster der Steiermark in
+                sich auf. Eine Einreihung in die Bestände der UBG zu diesem Zeitpunkt und damit
+                verbunden eine Provenienz aus einem dieser Klöster ist plausibel; ein irregulärer
+                Besitzgang zu diesem oder einem späteren Zeitpunkt ist aber genauso wenig
+                auszuschließen. (Kranich-Hofbauer 2003, 610)</p>
+                        </provenance>
+                        <acquisition>
+                            <ab>Übernahme durch Universitätsbibliothek Graz</ab>
+                            <signatures> Stempel der UB Graz <locus corresp="#L1_leer"
+                                    />1v gleichzeitig Spiegel
+                vorne, Seiten Mitte <locus
+                                    corresp="#L38RossarzneiWein">SPv Seiten Mitte</locus>
+                            </signatures>
+                        </acquisition>
+                    </history>
+                    <additional>
+                        <listBibl>
+                            <bibl xml:id="footnote1"
+                                >Kiewisch, Susanne. Obstbau und Kellerei in lateinischen
+                Fachprosaschriften des 14. und 15 Jahrhunderts. In: Würzburger medizinhistorische
+                Forschung. Band 57. 1994. S.118</bibl>
+                            <bibl xml:id="footnote2"
+                                >Kranich-Hofbauer, Karin. Zusammengesetzte Handschriften -
+                Sammelhandschriften. Materialität - Kodikologie - Editorik. In: editio. Band 32.
+                Materialität in der Editionswissenschaft Hrsg. Martin Schubert. 2010. S.
+                309-322.</bibl>
+                            <bibl xml:id="footnote3"
+                                >Kranich-Hofbauer, Karin. Die Suche nach der Ordnung im Chaos
+                Textallianzen in der Grazer Handschrift 1609. In: Textsortentypologien und
+                Textallianzen von der Mitte des 15. bis zur Mitte des 16. Jahrhunderts Akten zum
+                Internationalen Kongress in Berlin 21. bis 25. Mai 2003. S. 601-624.</bibl>
+                            <bibl>Handbeschreibung (scriptDesc) Astrid Böhm</bibl>
+                        </listBibl>
+                    </additional>
+
+                    <msPart n="1r-10v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">Deckel, 1r-10v</locus>
+                                <title>leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart ana="cooking_recipes" n="11r-94v">
+
+                        <head>Kochrezepte</head>
+                        <msContents>
+                            <textLang>
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang>
+                                <lang ana="other" n="Q1163234">Medevial Latin</lang>
+                            </textLang>
+
+                            <msItem>
+                                <locus ana="folio">11r-94v</locus>
+                                <title>Kochrezepte</title>
+                                <titlePart>Kochrezepte</titlePart>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="95r-134v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">95r-134v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="135r-141v">
+
+                        <msContents>
+                            <textLang>
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang>
+                                <lang ana="other" n="Q1163234">Medevial Latin</lang>
+                            </textLang>
+                            <msItem>
+                                <locus ana="folio">135r-141v</locus>
+                                <title>Anleitungen zum Färben und Reinigen von Stoffen und Kleidern</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="142r-142v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">142r-142v</locus>
+                                <title>leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="143r-148v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen wegen Abb bei mainLang, hier gehen nur bestimmte Zeichenkombinationen und lat passt eh nicht ganz für Mittellatein oder geht das so?-->
+                            <msItem>
+                                <locus ana="folio">143r-148v</locus>
+                                <title>diätetische Monatsregeln</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="148v-149v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">148v-149v</locus>
+                                <title>medizinische Monatsregeln</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="149v-154v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">149v-154v</locus>
+                                <title>medizinische Rezepte: gebrannte Wasser</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="151r - 153r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">151r - 153r</locus>
+                                <title>medizinische Rezepte: Harnstein</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="153v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">153v</locus>
+                                <title>medizinische Rezepte: Wolf</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="154r-154v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">154r-154v</locus>
+                                <title>medizinische Rezepte: diverses</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="155r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">155r</locus>
+                                <title>Tintenrezept</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="155v-172r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">155v-172r</locus>
+                                <title>medizinische Rezepte: Salben, Tinkturen, Umschläge, Tränke, Pulver</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="172r-190r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">172r-190r</locus>
+                                <title>technische Rezepte: Farben und Tinten, Korallen, Perlen, Messing (183v
+                  leer)</title>
+                                <note>Fol. 183v leer, Folio 183 ist ein Fremdkörper in Lage 16</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="190v-191v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">190v-191v</locus>
+                                <title>medizinische Rezepte</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="192r-192v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">192r-192v</locus>
+                                <title>Harnsteintraktat</title>
+                                <note>Folio 192 ist ein Fremdkörper in Lage 16</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="193r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">193r</locus>
+                                <title>Speisentabelle: Suppen</title>
+                                <note>Folio 193 wurde während Restaurierung falsch zugeordnet, gehört eigentlich zu
+                  Lage 17</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="193v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">193v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="194r-248v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">194r-248v</locus>
+                                <title>medizinische Rezepte: Erkrankungen grob gegliedert von Kopf bis Fuß,
+                  Frauenleiden</title>
+                                <note>216v-228v Kräuter und ihre Tugenden; ab 229r Mischung
+                  hauswirtschaftliche/technologische Ratschläge, med. Rezepte; ab 244v med.
+                  Anweisungen, Tränke und Tinkturen</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="249r-250r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">249r-250r</locus>
+                                <title>Contra strangwinariam</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="250v-252r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">250v-252r</locus>
+                                <title>Pesttraktat des Michael Schrikh</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="252v-257v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">252v-257v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="258r-264v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">258r-264v</locus>
+                                <title>Pestregimen gereimt</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="264v-266v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">264v-266v</locus>
+                                <title>Pestregimen</title>
+                                <titlePart>Pestregimen</titlePart>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="266v-267r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">266v-267r</locus>
+                                <title>Pestrezepte</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="267v-268v">
+
+                        <msContents>
+
+                            <msItem>
+                                <locus ana="folio">267v-268v</locus>
+                                <title type="leer">leer</title>
+
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+
+                    <msPart n="269r-275r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">269r-275r</locus>
+                                <title>Ratschläge für Haushalt und Gesundheit</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="275v-277r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">275v-277r</locus>
+                                <title>Pestregimen des Appollonius zu Mainz</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="277v-278r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">277v-278r</locus>
+                                <title>Pestregimen</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="278v">
+
+                        <msContents>
+                            <textLang>
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang>
+                                <lang ana="other" n="Q1163234">Medevial Latin</lang>
+                            </textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">278v</locus>
+                                <title>medizinisches Rezept: Trank</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+
+                    <msPart n="279r-282v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">279r-282v</locus>
+                                <title>Schlaftraktat des Johannes Rock</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="282v-285r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">282v-285r</locus>
+                                <title>medzinische Ratschläge: Aderlass, Temperamentenlehre</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+
+                    <msPart n="286r-287r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">286r-287r</locus>
+                                <title>Zeichen des Todes</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="287r-298v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">287r-298v</locus>
+                                <title>medizinische Rezepte, Merkverse Gewürze, Verzeichnis von Heilpflanzen,
+                  Beschreibung von Krankheiten</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="299r-299v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">299r-299v</locus>
+                                <title>Liste Heilpflanzen: latein – deutsch</title>
+                                <note>Folio 299 ist ein halbes Blatt</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="300r-302r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">300r-302r</locus>
+                                <title>Benediktinerregel: Merkverse</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="302v-304r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">302v-304r</locus>
+                                <title>medizinische Rezepte</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+
+                    <msPart n="304v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">304v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="305r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">305r</locus>
+                                <title>Konstitutionen Benedikt XII.</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="305v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">305v</locus>
+                                <title>Statuten des Kapitels von Narbone</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="306r-310r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">306r-310r</locus>
+                                <title>Exzerpte aus naturwissenschaftlichen und medizinischen Traktaten, technische
+                  und medizinische Rezepte</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="310v-325r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">310v-325r</locus>
+                                <title>medizinische/hauswirtschaftliche Ratschläge und Rezepte, Vergolden,
+                  Farben</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="325v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio" corresp="#MS1609_0325v">325v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="326r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio" corresp="#MS1609_0326r">326r</locus>
+                                <title>2 Rezepte Nachtrag</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="326v-327v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">326v-327v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="328r">
+
+                        <msContents>
+                            <textLang>
+                                <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang>
+                                <lang ana="other" n="Q1163234">Medevial Latin</lang>
+                            </textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">328r</locus>
+                                <title>Pestrezepte</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="328v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">328v</locus>
+                                <title>Pestregimen an den Markgrafen von Mähren</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="329r-334v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">329r-334v</locus>
+                                <title>Pesttraktat, Pestrezepte</title>
+                                <note>Folio 334_2r ist vermutlich der Tallon zu Folio 348</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="335r-346v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">335r-346v</locus>
+                                <title>Hauswirtschaft: Rezepte und Ratschläge: Öle, Seifen, Fleckentfernung,
+                  technologische Rezepte, Metalle und Holz</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="347r-347v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">347r-347v</locus>
+                                <title>medizinische Rezepte</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="348r-348v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">348r-348v</locus>
+                                <title>religiöser Text</title>
+                                <note>Folio 348 wurde nachträglich eingeklebt gehört inhaltlich aber zu Lage
+                  29</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="349r-356v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">349r-356v</locus>
+                                <title>Pflanzen und deren Heilwirkungen</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="357r-359r">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">357r-359r</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="359v-360r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">359v-360r</locus>
+                                <title>Hermann, der Mönch von Salzburg Tischgebete in Versen</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="360v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">360v</locus>
+                                <title type="leer">leer</title>
+                                <titlePart>leer</titlePart>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="361r-362r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">361r-362r</locus>
+                                <title>Behandlung von gebrochenen und zähflüssigen Weinen</title>
+                                <titlePart>Behandlung von Weinen</titlePart>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="362v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">362v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="363r-366v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">363r-366v</locus>
+                                <title>Traktat zur menschlichen Fruchtbarkeit und Befruchtung</title>
+                                <titlePart>Traktat zur menschlichen Fruchtbarkeit</titlePart>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="367r-368v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">367r-368v</locus>
+                                <title>medizinische Rezepte</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="369r-372v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">369r-372v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="373r-373v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">373r-373v</locus>
+                                <title>Baumkultur</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="374r-383v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">374r-383v</locus>
+                                <title>Opusculum de plantationibus arborum (mitten im Satz beginnend) inklusive
+                  Skizzen (376v-379r)</title>
+                                <note>Folio 381_2r ist eine während Restaurierung abgelöste Fehltextüberklebung von
+                  Folio 381</note>
+                                <note>Folio 381_3 herausgeschnitten nur ein paar Milimeter vom Blatt noch
+                  vorhanden</note>
+                                <note>eine überklebte Stelle ist ersichtlich aber Überklebung nicht mehr
+                  vorhanden</note>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="384r-385r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">384r-385r</locus>
+                                <title>Nachträge</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="385v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">385v</locus>
+                                <title>Notiz</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="386r-387v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">386r-387v</locus>
+                                <title type="leer">leer</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="388r-416r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">388r-416r</locus>
+                                <title>Pelzbuch des Gottfried von Franken (Version B, C) </title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="416v-419v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">416v-419v</locus>
+                                <title>Regimen sanitatis (des Arnold von Bamberg?)</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="419v-423r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">419v-423r</locus>
+                                <title>Rezepte zur Gesundheitsprophylaxe</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="423v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">423v</locus>
+                                <title>Nachtrag mit Jahresangabe (1451) </title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="424r-448v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">424r-448v</locus>
+                                <title>Pelzbuch des Gottfried von Franken (Version B, C)</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="449r-470r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">449r-452r</locus>
+                                <title>Ratschläge gegen diverse Erkrankungen</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="452v-454v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">452v-454v</locus>
+                                <title>Ratschläge gegen die Pest</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="455r-458v">
+
+                        <msContents>
+                            <msItem>
+                                <locus ana="folio">455r-458v</locus>
+                                <title type="leer">leer</title>
+                                <titlePart>leer</titlePart>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="459r-465v">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio" corresp="#MS1609_0459r">459r-465v</locus>
+                                <title>Roßarznei des Meister Albrant</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                    <msPart n="465v-470r">
+
+                        <msContents>
+                            <textLang><lang ana="main" n="Q29540" corresp="ug"
+                                >Bavarian</lang></textLang>
+                            <!-- überprüfen, s.o -->
+                            <msItem>
+                                <locus ana="folio">465v-470r (Rückdeckel)</locus>
+                                <title>Behandlung von gebrochnen Weinen</title>
+                            </msItem>
+                        </msContents>
+                    </msPart>
+
+                </msDesc>
+                <listBibl type="transcriptions">
+                    <bibl>Zotter, Grazer Hausbuch http://sosa2.uni-graz.at/sosa/druckschriften/dergedeckteTisch/pdf/ms1609/ms._1609_transkription.pdf</bibl>
+                    <bibl>Transkription Astrid Böhm und Karin Kranich</bibl>
+                </listBibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <facsimile>
+        <surface start="#Gr1_011r">
+            <graphic mimeType="image/jpeg" url="graz_ub_ms_1609_011r.jpg" xml:id="IMG.011r"/>
+        </surface>
+        <surface start="#Gr1_011v">
+            <graphic mimeType="image/jpeg" url="graz_ub_ms_1609_011v.jpg" xml:id="IMG.011v"/>
+        </surface>
+    </facsimile>
+    <text>
+        <body xml:space="preserve">
+            <div>
+                <pb xml:id="MS1609_011r" n="011r"/>
+                <ab type="recipe" xml:lang="de-x-enh" n="1" xml:id="MS1609.1"><opener>Item ildw
+                        machen ein <title>guet <ingredient en="egg" commodity="Q93189">air</ingredient> von <ingredient en="almond" commodity="Q39918">mandel</ingredient></title></opener> so <instruction>nymb den
+                            <ingredient en="almond" commodity="Q39918">mandel</ingredient></instruction> vnd <instruction>Stoß in
+                        chlain</instruction> vnd <instruction>streich In mit <ingredient en="wine" commodity="Q282">weinn</ingredient> durch</instruction> vnd
+                        <instruction>thue dar ein <ingredient en="ginger" commodity="Q15046077">Imberr</ingredient></instruction> vnd <instruction>ain wincziger dunner
+                            <ingredient en="Fish stock (food)" commodity="Q30748629">visch <dish en="" commodity="Q275068">prue</dish></ingredient> dar vnder
+                            <alternative reason="instruction">ob dw der <ingredient en="Fish stock (food)" commodity="Q30748629">visch <dish en="" commodity="Q275068">prue</dish></ingredient> nit hast so gewß
+                            ein winczig <ingredient en="water" commodity="Q283">wasser</ingredient>
+                            dar vnder</alternative></instruction> vnd <instruction>mach es
+                        gelb</instruction> vnd <servingTip>wenn dw es an richczst so sneydt dar ein
+                        pat <ingredient en="white bread" commodity="Q1501889">semmel</ingredient>
+                        wurflat</servingTip>
+                    <closer><servingTip>das magstu geben am freyetag fur ein <dish en="sauce" commodity="">suppen</dish></servingTip></closer></ab>
+                <ab type="recipe" xml:lang="de-x-enh" n="2" xml:id="MS1609.2"><opener>Item willdw
+                        machen ein <title><ingredient en="pastry" commodity="Q477248"><dish en="pastry" commodity="">pachens</dish></ingredient> von
+                                <ingredient en="rice" commodity="Q5090">reisch</ingredient></title></opener> So <instruction>nymb</instruction> vnd
+                        <instruction>sewdt den <ingredient en="rice" commodity="Q5090">reisch</ingredient> In ainen <ingredient en="water" commodity="Q283">wasser</ingredient>
+                        <kitchenTip>doch das es sich nit vast versiedt</kitchenTip></instruction>
+                    <instruction>seich In dan schon ab</instruction> vnd <instruction>thue In ainen
+                            <tool en="mortar" commodity="">reib scherben</tool></instruction> vnd
+                        <instruction>reib In schon</instruction> vnd <instruction>treib rache
+                            <ingredient en="egg" commodity="Q93189">air</ingredient>
+                        durch</instruction>
+                    <instruction>mach In nicht cze dwnn</instruction>
+                    <instruction>thue ein <ingredient en="lard" commodity="Q72827">Smalcz</ingredient> in ein <tool en="pan" commodity="">phann</tool></instruction> vnd <instruction>siech es durch dy hanndt als
+                        prantew <dish en="little cake" commodity="">chuchlen</dish></instruction>
+                    <instruction>wan es gepachen ist So sa ein <ingredient en="unrefined cane sugar" commodity="Q17136949">czugker</ingredient> dar auff</instruction> vnd
+                        <instruction>versalcz es nicht</instruction></ab>
+            </div>
+        </body>
+    </text>
+</TEI>

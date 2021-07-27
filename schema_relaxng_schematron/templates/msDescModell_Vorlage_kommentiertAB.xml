@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../Schema/glyph.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../Schema/corema_glyph.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Electronic transcription of "Signatur"</title>
+         </titleStmt>
+         <editionStmt>
+            <edition>Hyperdiplomatische Basistranskription der Handschrift ...</edition>
+            <editor>
+               <forename>Astrid</forename>
+               <surname>Böhm</surname>
+            </editor> 
+            <principal>
+               <forename>Helmut W.</forename>
+               <surname>Klug</surname>
+            </principal>
+            <funder ref="https://www.fwf.ac.at/">FWF I 3614</funder>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>
+               <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+               <orgName ref="http://d-nb.info/gnd/1137284463">ZIM-ACDH, Universität Graz</orgName>
+            </publisher>
+            <authority>
+               <ref target="https://informationsmodellierung.uni-graz.at"></ref>
+               <orgName ref="http://d-nb.info/gnd/1137284463">Zentrum für Informationsmodellierung -
+                  Austrian Centre for Digital Humanities, Karl-Franzens-Universität Graz</orgName>
+            </authority>
+            <distributor>
+               <ref target="https://gams.uni-graz.at"></ref>
+               <orgName>GAMS - Geisteswissenschaftliches Asset Management System</orgName>
+            </distributor>
+            <availability>
+               <licence n="text" target="https://creativecommons.org/licenses/by/4.0">Creative Commons BY
+                  4.0</licence>
+               <licence n="manuscript facsimiles" target="https://creativecommons.org/licenses/by-nc-sa/3.0/at/">Creative Commons BY-NC-SA 3.0
+               </licence>
+            </availability>
+            <date when="2020"></date>
+            <pubPlace>Graz</pubPlace>
+            <idno type="PID">o:corema</idno><!-- da muss rein: o:corema.a1 oder o:corema.bs2 usw. -->
+            <ref target="context:corema" type="context"/>
+            <ref target="context:corema.glyph" type="context"/>
+         </publicationStmt>
+         <sourceDesc>
+            
+             <msDesc> <!-- hier beginnt eigentliche ms Beschreibung -->
+               <msIdentifier> 
+                  <country></country> <!-- Staat -->
+                  <region></region> <!-- Region/Bundesland -->
+                  <settlement></settlement> 
+                  <institution></institution> <!-- Uni oder Archiv oder Bibliothek -->
+                  <repository>XXX</repository> <!-- Unterabteilung oder gleich wie <institution> -->
+                  <idno></idno> <!-- Bibliotheks-Signatur -->
+                  <msName></msName> <!-- Vulgo-Namen, falls vorhanden -->
+                  <altIdentifier type="abbr"> <!-- Corema-Kurzsigle --> <!-- Element kann mehrfach vorkommen, wenn zb alte Signatur einer Bib. -->
+                     <idno></idno>
+                  </altIdentifier>
+                  <altIdentifier>
+                     <idno></idno>
+                  </altIdentifier>
+               </msIdentifier>
+                
+                <msContents>
+                   <!-- das gilt für die gesamten HS -->
+                   <textLang ana="manuscript">zB deutsch latein</textLang><!-- wenn mehr Infos vorhanden, dann ein <lang>nur um die Sprache und dann weiter im <textLang> s.a Gr1 -->
+                </msContents>
+                
+               <physDesc> <!-- physische  Beschreibung-->
+                  <objectDesc form="composite-Manuscript"> <!-- oder 'fragment', 'codex' usw -->
+                     <supportDesc > 
+                     
+                     <extent> <!-- betrifft den Buchblock, nicht den Deckel oder so  -->
+                        <measure unit="leaf" type="leavesCount"><!-- FOLIOZAHL --></measure> <!-- Einheit Blatt/Folio, dann dementsprechende Anzahl -->
+                        <dimensions type="block" unit="mm">
+                           <height></height>
+                           <width></width>
+                        </dimensions> 
+                     </extent>
+                        
+                        <foliation> <!--bezieht sich auf die Foliierung, also Folionummerierung--> 
+                           <ab type="completeness"></ab> <!-- meint Vollständigkeit oder eben fehlen einer Zählung usw.  -->
+                           <ab type="hand"></ab> <!-- Infos zur Hand, die foliiert hat -->
+                        </foliation>
+                        
+                        <collation> <!-- Lagen -->
+                           <formula style="chroust"></formula> <!-- Lagenformel nach Chroust, wenn vorhanden-->
+                          <catchwords></catchwords> <!-- Reklamanten/Kustoden -->
+                           <ab></ab>
+                           <locusGrp> <!-- detailierte Lagenbeschreibung mgl., s.Bsp. Gr1 -->
+                              <locus>FOLIO VON BIS</locus> 
+                              <locus >FOLIO VON BIS</locus>
+                              <!-- usw. -->
+                           </locusGrp>
+                        </collation>
+                        
+                        <condition> <!-- meint die allgemeine Beschreibung der Hs also Material und Zustand -->
+                           <desc>TEXT</desc>
+                           <material></material><!-- Papier oder Pergament oder gemischt usw -->
+                           <watermark xml:id="xyz" >TEXT
+                              <locusGrp> <!-- wenn sich Wasserzeichen verorten lassen, s. Gr1-->
+                                 <locus></locus>
+                              </locusGrp>
+                           </watermark>
+                        </condition>
+                     </supportDesc>
+                     
+                     <layoutDesc> <!-- betrifft Layout und Seitenspiegel, Schriftraum usw. -->
+                        <layout columns="2"> <!-- HIER  DIE KOLUMNENANZAHL REIN, 1, 2 oder 3  je nach dem-->
+                           <p style="measure">zb 140x100mm</p>
+                           <p style="textblock">zb zweizeilig</p>
+                           <p style="lines">18-25</p>
+                           <p style="text">fließtext....</p>
+                        </layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  
+                  <handDesc><!-- allgemeines zu den Schreiberhänden, zB durch <handDesc @hands="2"> heißt MS weist 2 Hände auf usw.-->
+                     <handNote></handNote> <!--<handNote ana="1"> mit @ kann ich auf eine bestimmte Hand hinweisen-->
+                  </handDesc>
+                      
+                  
+                  <scriptDesc><ab></ab></scriptDesc> <!-- hier müsste die Handbeschreibung rein --><!-- bei mehreren Händen in der ersten scriptNote einen ab einbauen und dort nochmal die fol. Angabe wiederholen, s. gr 1-->
+                  
+                  <bindingDesc> <!-- alles zur Bindung, Einband --> <!-- hier noch vereinfachen, das ist zu kompliziert, war so vielleicht für 1609 brauchbar, jetzt nicht mehr -->
+                     <binding corresp="#Einband"> 
+                        <condition></condition>
+                        <decoNote type="bindingMaterial"></decoNote>
+                        <decoNote type="decoration">Verzierunge jeglicher Art</decoNote>
+                        <decoNote type="metal"></decoNote>
+                        <decoNote type="clasps">Schnallen</decoNote>
+                         <decoNote type="spine">Buchrücken</decoNote>
+                         <decoNote type="added"></decoNote>
+                        <decoNote type="wastepaper">Makulatur, altes schon mal benutzes Papier </decoNote>
+                        <decoNote type="decoPlaceDate">
+                           <origDate>zb eingeprägte Jahreszahl</origDate>
+                        </decoNote>
+                        <!-- wenn vorhanden -->
+                        
+                    </binding>
+                  </bindingDesc>
+               </physDesc>
+                
+               <history>
+                  
+                  <origin> <!--wenn nur Schätzung-->
+                     <origDate><date xml:lang="de" notBefore="1400" notAfter="1500">15. Jh.</date><date xml:lang="en" notBefore="1400" notAfter="1500">15th c.</date></origDate> <!-- wenn konkrete Jahreszahl genannt wurde dann statt notBefore/noteAfter ein @when einsetzen 
+                        in notBefore notAfter 4 stellige Jahreszahl, Helmut? Zeitspanne -->
+                     <note></note>
+                     <origDate corresp="#">JAHR</origDate><!-- wenn eine Datierung auf einem Folio ist dann hinter # die Folioangabe und als Elementeninhalt die Jahreszahl -->
+                     <origPlace cert="high"></origPlace> <!-- Entstehungsort MUSS eingetragen werden, wenn mehr Infos dann innerhalb von <origPlace> ein <placeName> nur um den Ort/Info , s.a. Gr1-->
+                     <!-- Entstehungsort, auch möglich unbekannt, dann mit @cert="low" -->
+                     <orgName role="scriptorium"></orgName>
+                     <note type="purpose">Zweck</note> 
+                     <note type="binding"></note>
+                     <note type="part"></note> </origin> 
+                  
+                  <provenance></provenance> <!-- Provinienz, soweit bekannt -->
+                  
+                 <acquisition><!-- letzer 'Schritt' wie die HS an den aktuellen Ort gekommen ist, zb. Besitzvermerk usw  -->
+                    <!-- text -->
+                     <signatures>
+                   <!-- text --><!-- Beschreibung von Stempel, Seitenangebn usw -->
+                     </signatures>
+                  </acquisition>
+                  
+                </history>
+                
+               <additional> <!-- Kataloge, Editionen usw. -->
+                  <listBibl type="catalogue_edition">
+                    <bibl></bibl>  <!-- hier bibl. Angaben zu den Katalogen -->
+                    <bibl>Handbeschreibung (scriptDesc) Astrid Böhm</bibl>
+                 </listBibl>
+               </additional>
+              <!-- for composite Manuscripts: -->
+                
+                <!-- neue version nicht kochrezepte-->
+                
+                <msPart n="folio bis folio"><!-- in n der Umfang von wo bis wo der Teil geht -->
+                   <msIdentifier></msIdentifier><!-- kann/mus nicht lt. Chr. -->
+                   <msContents>
+                      <textLang><!-- wenn zwei sprachen dann so, ansonsten mur die 'main' Sprache   -->
+            		<lang ana="main" n="Q29540" corresp="ug">Bavarian</lang>
+            		<lang ana="other" n="Q1163234">Medieval Latin</lang>
+            	</textLang>
+                      <msItem>
+                         <locus ana="folio">Folio bis Folio</locus>
+                         <title></title>
+                         <note></note><!-- kann -->
+                      </msItem>
+                   </msContents>
+                </msPart>
+                
+                <!-- neue version für kochrezepte ALLES GLEICH NUR ZUSÄTZLICH HEAD + ANA-->
+                
+                <msPart ana="cooking_recipes" n="folio bis folio"><!-- in n die range von wo bis wo der kochzeptteil geht -->
+                   <msIdentifier/><!-- kann  -->
+                   <head></head><!-- titel des teils zb Kochrezepte oder kochbuch des.... -->
+                   <msContents>
+                      <textLang><lang ana="main" n="Q1163234">Medieval Latin</lang> <!-- wenn nur eine Sprache vorhanden, wenn dt. Dialekt dann: -->
+                      
+                      <lang ana="main" n="Q29540" corresp="ug">Bavarian</lang></textLang>
+                      
+                      <!-- wenn zwei sprachen dann:
+                       <textLang>
+            		<lang ana="main" n="Q29540" corresp="lg">Bavarian</lang>
+            		<lang ana="other" n="Q1163234">Medieval Latin</lang>
+            	</textLang>                    -->
+                      <msItem>
+                         <locus ana="folio"></locus> <!-- muss -->
+                         <title></title> <!-- muss -->
+                         <textLang></textLang><!-- nur wenn dieses eine Item andere Sprache aufweist -->
+                         <note></note><!-- kann -->
+                      </msItem>
+                      <msItem>
+                         <locus ana="folio"></locus>
+                         <title></title>
+                         <textLang></textLang><!-- wenn dieses eine Item andere Sprache aufweist -->
+                         <note></note><!-- kann -->
+                      </msItem>
+                   </msContents>
+                </msPart>
+            </msDesc>
+          
+        <listBibl type="transcription"><!-- transkriptionen die verwendet wurden -->
+           <bibl></bibl>
+           <bibl></bibl> 
+           <!--oder-->
+              <bibl>Transkription Astrid Böhm</bibl>
+        </listBibl>
+         </sourceDesc>
+       </fileDesc>
+     <!--  Betrfifft das was nicht durch die allg. Transkriptionsregeln und die charDecl. abgedeckt ist
+        wenn es etwas zu  ganz spezieler Codierung oder dieser speziellen Transkription gibt = dann encodingDesc einfügen -->
+     
+     <!--<encodingDesc>
+        <ab>
+           <note>bla bla</note>
+        </ab>
+        <charDecl>
+           <char xml:id="a">
+              <charName>LATIN SMALL LETTER A</charName>
+              <mapping/>
+              <note>dfg</note>
+           </char>
+           <glyph corresp="#a" xml:id="ains" ana="allograph"
+              resp="https://bora.uib.no/handle/1956/10699" source="p.24">
+              <glyphName>LATIN SMALL LETTER A INSULAR FORM</glyphName>
+              <mapping type="normalized">a</mapping>
+              <mapping type="transcription">a2</mapping>
+              <mapping type="unicode_codepoint" subtype="PUA-var">F200</mapping>
+              <mapping type="unicode_codepoint_hex" subtype="html_entity"></mapping>
+              <mapping type="unicode_codepoint" subtype="unicode_symbol"></mapping>
+           </glyph>
+        </charDecl>
+     </encodingDesc>-->
+     
+     
+  </teiHeader>
+   
+  
+  <text>
+      <body>
+        <p>Transkription</p>
+      </body>
+  </text>
+</TEI>
+
+
