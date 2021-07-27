@@ -1,0 +1,343 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Graz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.435104370117188,
+          47.07152483385375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wien"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.376495361328125,
+          48.21003212234042
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Berlin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3978271484375,
+          52.51622086393074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Augsburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.909423828125,
+          48.36902309709986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Basel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.589836120605469,
+          47.55683540041267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brixen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.656150817871094,
+          46.717268685073954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Debrecen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.62933349609375,
+          47.535746978239125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dessau"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.24151611328125,
+          51.8374746497308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Erlangen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.002120971679686,
+          49.59691512969532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Heidelberg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.686752319335938,
+          49.409632927390305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hamburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.990692138671875,
+          53.550507262191466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Köln"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.96533203125,
+          50.941123218673084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hildesheim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.9481201171875,
+          52.15413574555202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "München"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.575469970703125,
+          48.13859959165873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Karlsruhe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.397674560546875,
+          49.011753124756915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Konstanz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.17306900024414,
+          47.65949106968365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Michaelbeuern"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.028411865234375,
+          48.019726056207574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prag"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4195556640625,
+          50.099440987634985
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nürnberg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.063232421875,
+          49.457413352792216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pannonhalma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.753734588623047,
+          47.54976824814659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salzburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.050384521484375,
+          47.80116408820393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Solothurn"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.538681030273438,
+          47.208607443792744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stockholm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.046417236328125,
+          59.32338185310805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wolfenbüttel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.533828735351562,
+          52.16235002649106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Schloss Wolfegg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.791779518127441,
+          47.82325488214116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zürich"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.540668487548828,
+          47.372663382927
+        ]
+      }
+    }
+  ]
+}
