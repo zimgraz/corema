@@ -106,6 +106,7 @@
           <ref name="hi"/>
           <ref name="lb"/>
           <ref name="note"/>
+          <ref name="num"/>
           <ref name="pb"/>
           <ref name="cb"/>
           <ref name="seg"/>
@@ -175,6 +176,7 @@
           <ref name="note"/>
           <ref name="pb"/>
           <ref name="cb"/>
+          <ref name="num"/>
           <ref name="seg"/>
           <ref name="sic"/>
           <ref name="supplied"/>
@@ -212,6 +214,7 @@
           <ref name="add"/>
           <ref name="hi"/>
           <ref name="w"/>
+          <ref name="del"/>
         </choice>
       </oneOrMore>
     </element>
@@ -318,6 +321,16 @@
           <ref name="note"/>
         </choice>
       </oneOrMore>
+    </element>
+  </define>
+  <define name="num">
+    <element name="num">
+      <attribute name="ana">
+        <choice>
+          <value>recipeNumber</value>
+        </choice>
+      </attribute>
+      <text/>
     </element>
   </define>
   <define name="g">

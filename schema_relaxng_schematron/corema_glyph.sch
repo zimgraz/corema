@@ -94,7 +94,7 @@
         <name/> elements have to have a @style and/or @rend attribute 
       </assert>
      
-      <report test="@rend != 'textColour:RED;' and @rend != 'underlined;' and @rend != 'italic' and @rend != 'sup' and @rend != 'underlined; textColour:RED;'">
+      <report test="@rend != 'textColour:RED;' and @rend != 'underlined;' and @rend != 'italic' and @rend != 'sup' and @rend != 'underlined; textColour:RED;' and @rend != 'textColour:BLUE;'">
         the @rend attribute can only be 'textColour:RED;', 'underlined;' or 'underlined; textColour:RED;' or "italic" or "sup"
       </report>
     </rule>

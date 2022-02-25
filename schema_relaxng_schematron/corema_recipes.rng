@@ -40,6 +40,9 @@
                     <choice>
                       <text/>
                       <ref name="foreign"/>
+                      <ref name="title_body"/>
+                      <ref name="ingredient"/>
+                      <ref name="tool"/>
                     </choice>
                   </oneOrMore>
                 </element>
@@ -468,6 +471,7 @@
           <value>kitchenTip</value>
           <value>household</value>
           <value>parody</value>
+          <value>dietetics</value>
         </choice>
       </attribute>
       <attribute name="subtype">
@@ -516,6 +520,18 @@
       </interleave>
     </element>
   </define>
+  <define name="num">
+    <element name="num">
+      <attribute name="ana">
+        <choice>
+          <value>recipeNumber</value>
+        </choice>
+      </attribute>
+      <attribute name="value">
+        <data type="int"/>
+      </attribute>
+    </element>
+  </define>
   <define name="opener">
     <element name="opener">
       <oneOrMore>
@@ -545,11 +561,6 @@
           <ref name="sp"/>
         </choice>
       </oneOrMore>
-    </element>
-  </define>
-  <define name="num">
-    <element name="num">
-      <text/>
     </element>
   </define>
   <define name="authority">
@@ -645,6 +656,7 @@
           <!--<ref name="title"/>-->
           <ref name="foreign"/>
           <ref name="note"/>
+          <ref name="num"/>
         </choice>
       </zeroOrMore>
     </element>

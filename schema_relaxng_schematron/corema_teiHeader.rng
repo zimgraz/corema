@@ -376,6 +376,7 @@
             </element>
             <optional>
                 <element name="revisionDesc">
+                    <oneOrMore>
                     <element name="listChange">
                         <attribute name="prev"/>
                         <oneOrMore>
@@ -393,6 +394,7 @@
                             </element>
                         </oneOrMore>
                     </element>
+                    </oneOrMore>
                 </element>
             </optional>
             <optional>
